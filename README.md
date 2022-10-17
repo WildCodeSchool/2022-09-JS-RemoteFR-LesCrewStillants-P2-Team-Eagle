@@ -36,4 +36,8 @@ It's pre-configured with a set of tools which'll help students produce industry-
 
 ### Team Dev
 
-
+- Christopher
+- Alicia
+- Vivien
+- Lana
+- Mustapha
