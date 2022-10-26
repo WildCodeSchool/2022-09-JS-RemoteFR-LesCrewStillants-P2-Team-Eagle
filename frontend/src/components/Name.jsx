@@ -1,20 +1,50 @@
 import { useState } from "react";
+import "./Name.css";
 
 function Name() {
   const [name, setName] = useState("User");
   const [newName, setNewName] = useState("");
+  const [isHiding, setIsHiding] = useState(false);
 
+  // Local Storage
+  function saveName() {
+    localStorage.setItem("name", JSON.stringify(name));
+  }
+
+  const loadData = () => {
+    if (!localStorage.getItem("name")) return;
+
+    const loadName = JSON.parse(localStorage.getItem("name"));
+    setName(loadName);
+  };
+
+  window.addEventListener("load", loadData);
+
+  // Function for registering a new UserName.
   function handleClick(event) {
     event.preventDefault();
     setName(newName);
+    saveName();
   }
-  return (
-    <>
-      <p>Name : {name}</p>
 
-      <form>
+  // Function to hide/show the change name Area.
+  function handleHide(event) {
+    event.preventDefault();
+    setIsHiding(!isHiding);
+  }
+
+  return (
+    <div className="Name">
+      <p>
+        Name : {name}
+        <button type="button" onClick={handleHide}>
+          Modify
+        </button>
+      </p>
+
+      <form className={isHiding === true ? "visible" : "hidden"}>
         <label type="name" name="userName">
-          Name :{" "}
+          {" "}
         </label>
         <input
           type="text"
@@ -24,7 +54,7 @@ function Name() {
         />
         <input type="submit" value="submit" onClick={handleClick} />
       </form>
-    </>
+    </div>
   );
 }
 
