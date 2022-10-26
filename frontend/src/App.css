@@ -1,0 +1,35 @@
+.Journal {
+  background-color: #FBECE6;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 326px;
+  border-radius: 10px;
+
+}
+
+span {
+  margin-top: 1rem;
+  color: #95462E;
+  font-weight: bold;
+}
+
+textarea {
+  background-color: #FBECE6;
+  border: none;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  border-radius: 10px;
+  background-color: #EB8F8F;
+  color: white;
+  border: none;
+  padding: 5px, 8px, 5px, 8px;
+}
