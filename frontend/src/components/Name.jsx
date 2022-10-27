@@ -15,6 +15,7 @@ function Name() {
     if (!localStorage.getItem("name")) return;
 
     const loadName = JSON.parse(localStorage.getItem("name"));
+
     setName(loadName);
   };
 

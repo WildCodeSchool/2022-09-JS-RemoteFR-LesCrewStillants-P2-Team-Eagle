@@ -1,15 +1,32 @@
 .visible {
   display: block;
+  animation: fade_in_show 0.5s;
 }
 
 .hidden {
   display: none;
+  animation: fade_in_show_two 0.5s;
 }
 
 .Name {
   padding: 1rem 0 1rem 0;
   background-color: #38c6a3;
   color: white;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 18px;
+}
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .Name form {
