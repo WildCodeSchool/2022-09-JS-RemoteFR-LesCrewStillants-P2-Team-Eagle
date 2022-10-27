@@ -19,11 +19,21 @@
 
 .Faq p {
   text-align: left;
-  margin-left: 1rem;
+  margin: 0 1rem;
+  margin-top: 1rem;
 }
 
-.Faq p:last-of-type {
-  margin-top: 1rem;
+.Faq p:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.Faq p:last-of-type,
+.Faq .rotate {
+  transform: rotate(180deg);
+  animation: none;
+  margin-top: 0;
 }
 
 .Faq a {

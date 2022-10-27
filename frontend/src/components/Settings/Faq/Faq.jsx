@@ -13,7 +13,8 @@ function Faq() {
   return (
     <div className="Faq">
       <p onClick={handleHide} aria-hidden="true">
-        Faq{" "}
+        <span>Faq </span>
+        <span className={isHiding === true ? "" : "rotate"}>V</span>
       </p>
       <p className={isHiding === true ? "visible" : "hidden"}>
         The Toasts emojis we used are from an illustrator called "June Design"
@@ -26,6 +27,13 @@ function Faq() {
           Click here
         </a>{" "}
         to see all her design.
+      </p>
+      <p
+        className={isHiding === true ? "visible" : "hidden"}
+        onClick={handleHide}
+        aria-hidden="true"
+      >
+        V
       </p>
     </div>
   );

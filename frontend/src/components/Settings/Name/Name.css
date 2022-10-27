@@ -14,7 +14,19 @@
   color: white;
   width: 80%;
   margin: 1rem auto;
+  text-align: left;
   border-radius: 18px;
+}
+
+.Name p,
+.Name form {
+  padding-left: 1rem;
+}
+
+.Name p:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
 }
 
 @keyframes fade_in_show {
