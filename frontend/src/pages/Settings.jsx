@@ -1,14 +1,16 @@
-import Name from "@components/Name";
-import logo from "@assets/logo.svg";
+import Name from "@components/Settings/Name/Name";
+import Faq from "@components/Settings/Faq/Faq";
+
+import "@components/Settings/Settings.css";
 
 export default function Settings() {
   return (
-    <>
+    <section id="Settings">
+      <h1>SETTINGS</h1>
+      <h2>Personnaliser</h2>
       <Name />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-      </header>
-    </>
+      <h2>Informations</h2>
+      <Faq />
+    </section>
   );
 }

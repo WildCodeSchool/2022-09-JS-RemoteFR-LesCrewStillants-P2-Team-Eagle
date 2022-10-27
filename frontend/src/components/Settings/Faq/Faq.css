@@ -1,0 +1,44 @@
+.visible {
+  display: block;
+  animation: fade_in_show 0.5s;
+}
+
+.hidden {
+  display: none;
+  animation: fade_in_show_two 0.5s;
+}
+
+.Faq {
+  padding: 1rem 0 1rem 0;
+  background-color: #38c6a3;
+  color: white;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 18px;
+}
+
+.Faq p {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.Faq p:last-of-type {
+  margin-top: 1rem;
+}
+
+.Faq a {
+  text-decoration: none;
+  color: #95462e;
+}
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,13 @@
+#Settings {
+  color: #95462e;
+  background-color: #fbece6;
+  padding: 1rem 0;
+}
+
+#Settings h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
+  width: 80%;
+  margin: 1rem auto;
+}
