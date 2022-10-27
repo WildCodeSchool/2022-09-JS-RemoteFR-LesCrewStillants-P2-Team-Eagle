@@ -8,7 +8,7 @@ function Name() {
 
   // Local Storage
   function saveName() {
-    localStorage.setItem("name", JSON.stringify(name));
+    localStorage.setItem("name", JSON.stringify(newName));
   }
 
   const loadData = () => {

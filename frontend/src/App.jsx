@@ -1,13 +1,11 @@
-import Home from "@pages/Home";
-import Name from "@components/Name";
+import Settings from "@pages/Settings";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Name />
-      <Home />
+      <Settings />
     </div>
   );
 }
