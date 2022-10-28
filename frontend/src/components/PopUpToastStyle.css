@@ -51,3 +51,11 @@
   font-size: 1.2rem;
   margin-top: 1rem;
 }
+
+#toastCenter {
+  text-align: center;
+}
+
+#toastCenter img {
+  margin: 1r em;
+}

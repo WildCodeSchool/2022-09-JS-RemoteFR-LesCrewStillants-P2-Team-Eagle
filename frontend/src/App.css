@@ -1,15 +1,3 @@
-
-/* journal note */
-.Journal {
-  background-color: #fbece6;
-  margin: 2rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 326px;
-  border-radius: 10px;
-
 * {
   margin: 0;
 }
@@ -20,60 +8,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
-
 }
 
-span {
+/* Début Journal*/
+.Journal {
+  background-color: #fbece6;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 326px;
+  border-radius: 10px;
+}
+
+.Journal span {
   margin-top: 1rem;
   color: #95462e;
   font-weight: bold;
 }
 
-textarea {
+.Journal textarea {
   background-color: #fbece6;
   border: none;
   resize: none;
 }
 
-textarea:focus {
+.Journal textarea:focus {
   outline: none;
 }
 
 /* save button */
-.save:hover {
+.Journal .save:hover {
   background-color: #edb6b6;
   cursor: pointer;
 }
 
-
-.save {
+.Journal .save {
   border-radius: 10px;
   background-color: #eb8f8f;
   color: white;
   border: none;
   padding: 5px, 8px, 5px, 8px;
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-
-}
+/* Fin Journal */
