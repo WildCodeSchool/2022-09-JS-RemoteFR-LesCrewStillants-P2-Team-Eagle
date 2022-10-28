@@ -1,0 +1,54 @@
+.visible {
+  display: block;
+  animation: fade_in_show 0.5s;
+}
+
+.hidden {
+  display: none;
+  animation: fade_in_show_two 0.5s;
+}
+
+.Faq {
+  padding: 1rem 0 1rem 0;
+  background-color: #38c6a3;
+  color: white;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 18px;
+}
+
+.Faq p {
+  text-align: left;
+  margin: 0 1rem;
+  margin-top: 1rem;
+}
+
+.Faq p:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.Faq p:last-of-type,
+.Faq .rotate {
+  transform: rotate(180deg);
+  animation: none;
+  margin-top: 0;
+}
+
+.Faq a {
+  text-decoration: none;
+  color: #95462e;
+}
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
