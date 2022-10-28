@@ -1,0 +1,53 @@
+.popUpBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUpContainer {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: #38c6a3;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: flex-end;
+}
+.closeButton button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: antiquewhite;
+}
+.question {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  color: antiquewhite;
+  font-size: 1.2rem;
+}
+
+.toastsMood img {
+  width: 5rem;
+}
+
+.exit button {
+  background-color: #eb8f8f;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: antiquewhite;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
