@@ -13,7 +13,7 @@ function PopUpToast({ closePopUp }) {
         <div className="question">
           <p>How do you feel today ?</p>
         </div>
-        <div>
+        <div id="toastCenter">
           {ToastsMood.map((toast, index) => (
             <img
               alt="ToastMood"
