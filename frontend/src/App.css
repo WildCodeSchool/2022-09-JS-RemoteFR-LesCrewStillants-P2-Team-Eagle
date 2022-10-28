@@ -1,3 +1,15 @@
+
+/* journal note */
+.Journal {
+  background-color: #fbece6;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 326px;
+  border-radius: 10px;
+
 * {
   margin: 0;
 }
@@ -9,27 +21,38 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+span {
+  margin-top: 1rem;
+  color: #95462e;
+  font-weight: bold;
 }
 
-.App {
-  text-align: center;
+textarea {
+  background-color: #fbece6;
+  border: none;
+  resize: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* save button */
+.save:hover {
+  background-color: #edb6b6;
+  cursor: pointer;
 }
+
+
+.save {
+  border-radius: 10px;
+  background-color: #eb8f8f;
+  color: white;
+  border: none;
+  padding: 5px, 8px, 5px, 8px;
 
 .App-header {
   min-height: 100vh;
@@ -52,4 +75,5 @@ code {
   to {
     transform: rotate(360deg);
   }
+
 }
