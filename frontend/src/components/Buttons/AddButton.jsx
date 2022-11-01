@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import addButton from "@assets/buttons/addToast.png";
 
 export default function AddButton() {

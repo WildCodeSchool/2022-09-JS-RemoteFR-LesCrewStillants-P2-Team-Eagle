@@ -3,19 +3,19 @@ import homeImg from "@assets/buttons/Home_button_graphisme_June_Design.png";
 import { useState } from "react";
 
 export default function HomeButton() {
-  const [home, setHome] = useState(true);
-  function handleHome() {
-    setHome(!home);
+  const [clickedButton, setClickedButton] = useState(true);
+  function handleClick() {
+    setClickedButton(!clickedButton);
   }
 
   return (
-    <div aria-hidden="true" onClick={handleHome} className="navButton">
+    <div aria-hidden="true" onClick={handleClick} className="navButton">
       <img
         src={homeImg}
         alt="Home button"
-        className={home ? "clickedButton" : "standardButton"}
+        className={clickedButton ? "clickedButton" : "standardButton"}
       />
-      <p className={home ? "textVisible" : "textHidden"}> Home </p>
+      <p className={clickedButton ? "textVisible" : "textHidden"}> Home </p>
     </div>
   );
 }

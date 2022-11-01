@@ -15,15 +15,14 @@ export default function Nav() {
 
   /* function clicked() {
     !useState; 
+  } 
+  const [clickedButton, setClickedButton] = useState(true);
+  function handleClick() {
+    setClickedButton(!clickedButton);
   } */
 
   return (
     <div className="navContainer">
-      {/* <HomeButton onClick={(setHome(clicked), { redirect })} />
-      <CalendarButton onClick={(setCalendar(clicked), { redirect })} />
-      <AddButton />
-      <TimelineButton onClick={(setCalendar(clicked), { redirect })} />
-  <SettingsButton /> */}
       <HomeButton />
       <CalendarButton />
       <AddButton />
