@@ -3,9 +3,12 @@ import Faq from "@components/Settings/Faq/Faq";
 
 import "@components/Settings/Settings.css";
 
-export default function Settings() {
+export default function Settings({ clickedButtonSettings }) {
   return (
-    <section id="Settings">
+    <section
+      id="Settings"
+      className={clickedButtonSettings ? "homeVisible" : "homeHidden"}
+    >
       <h1>SETTINGS</h1>
       <h2>Personnaliser</h2>
       <Name />
