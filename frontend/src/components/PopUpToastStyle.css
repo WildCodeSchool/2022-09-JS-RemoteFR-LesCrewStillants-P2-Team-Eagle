@@ -1,7 +1,7 @@
 .popUpBackground {
-  width: 100vw;
-  height: 100vh;
-  background-color: gray;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(128, 128, 128, 0.568);
   position: fixed;
   display: flex;
   justify-content: center;
@@ -9,8 +9,8 @@
 }
 
 .popUpContainer {
-  width: 500px;
-  height: 500px;
+  width: 90%;
+  margin: 2rem auto;
   border-radius: 12px;
   background-color: #38c6a3;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -38,17 +38,27 @@
   font-size: 1.2rem;
 }
 
+.question p {
+  font-weight: 600;
+}
+
 .toastsMood img {
   width: 5rem;
+}
+
+.exit {
+  display: flex;
+  justify-content: center;
 }
 
 .exit button {
   background-color: #eb8f8f;
   border: none;
-  border-radius: 1rem;
+  border-radius: 12px;
+  padding: 0.5rem;
   cursor: pointer;
   color: antiquewhite;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
@@ -57,5 +67,5 @@
 }
 
 #toastCenter img {
-  margin: 1r em;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
 }

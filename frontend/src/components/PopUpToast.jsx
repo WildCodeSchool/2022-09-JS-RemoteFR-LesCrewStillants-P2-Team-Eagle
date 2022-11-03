@@ -20,8 +20,8 @@ function PopUpToast({ closePopUp }) {
               alt="ToastMood"
               keys={index}
               src={toast.picture}
-              width="50rem"
-              height="50rem"
+              width="40rem"
+              height="40rem"
             />
           ))}
         </div>

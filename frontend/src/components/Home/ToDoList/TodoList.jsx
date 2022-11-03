@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Form from "./Form";
 import TodosList from "./TodosList";
 
-import "./TodoList.css";
+import "./ToDoList.css";
 
 function TodoList() {
   const initialState = JSON.parse(localStorage.getItem("todos")) || [];

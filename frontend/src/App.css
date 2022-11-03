@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;300;400&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url(@assets/Montserrat-Regular.ttf);
+}
 
 :root {
   --mint: #38c6a3;

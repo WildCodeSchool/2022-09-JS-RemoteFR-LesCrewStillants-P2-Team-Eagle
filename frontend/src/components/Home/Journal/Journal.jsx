@@ -10,8 +10,6 @@ function Journal() {
     setnoteText(event.target.value);
   }
 
-  function handleSaveClick() {}
-
   return (
     <div className="Journal">
       <span> Tell me more : </span>
@@ -22,11 +20,6 @@ function Journal() {
         value={noteText}
         onChange={handlechange}
       />
-      <div clasName="noteFooter">
-        <button className="save" onClick={handleSaveClick}>
-          save
-        </button>
-      </div>
     </div>
   );
 }
