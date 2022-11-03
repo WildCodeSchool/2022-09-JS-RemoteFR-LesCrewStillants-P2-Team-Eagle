@@ -8,7 +8,9 @@
   align-items: flex-start;
   height: 4rem;
   margin-top: 15rem;
+  padding-bottom: 5rem;
 }
+
 /*-------------------------EVERY NAV BUTTONS-------*/
 .navButton {
   display: flex;
@@ -38,56 +40,19 @@
   display: none;
 }
 
-/*-------------------------HOME BUTTON-------*/
-.homeButton {
-  width: 3rem;
-  height: 3rem;
-}
-
-.homeClicked {
-  width: 2rem;
-  height: 2rem;
-}
-
-.homeVisible {
-  display: block;
-}
-
-.homeHidden {
-  display: none;
-}
-
-/*-------------------------CALENDAR BUTTON-------*/
-
-.calendarButton {
-  width: 3rem;
-  height: 3rem;
-  background-color: #38c6a3;
-}
-
-p.calendarButton {
-  display: none;
-}
-
-img.buttonClicked {
-  height: 2rem;
-  width: 2rem;
-}
-
-p.buttonClicked {
-  display: flex;
-}
 /*-------------------------ADD BUTTON-------*/
 
 .addButton {
   width: 3rem;
   height: 3rem;
-  margin-top: -6rem;
 }
 
 .addButtonBackground {
-  width: 6rem;
-  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
   border-radius: 6rem;
   background: #38c6a3;
   margin-top: -2rem;
