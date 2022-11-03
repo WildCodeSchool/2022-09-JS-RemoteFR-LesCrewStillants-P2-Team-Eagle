@@ -5,6 +5,8 @@ import AddButton from "./Buttons/AddButton";
 import TimelineButton from "./Buttons/TimelineButton";
 import SettingsButton from "./Buttons/SettingsButton";
 
+import "./Nav.css";
+
 export default function Nav() {
   const [clickedButtonHome, setClickedButtonHome] = useState(true);
   const [clickedButtonCalendar, setClickedButtonCalendar] = useState(false);
