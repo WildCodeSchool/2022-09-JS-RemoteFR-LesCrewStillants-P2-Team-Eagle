@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;300;400&display=swap");
+:root {
+  --mint: #38c6a3;
+  --pink: #eb8f8f;
+  --white: #ffffff;
+}
 
 * {
   margin: 0px;
@@ -55,18 +60,6 @@ body {
 }
 
 /* // */
-
-:root {
-  --mint: #38c6a3;
-  --pink: #eb8f8f;
-  --white: #ffffff;
-}
-
-* {
-  margin: 0px;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-}
 
 .container {
   min-height: 100vh;
