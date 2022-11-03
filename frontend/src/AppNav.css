@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #fbece6;
+}
+/*-------------------------NAV CONTAINER----------*/
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #38c6a3;
+  padding: 0.5rem;
+  align-items: flex-start;
+  height: 4rem;
+  margin-top: 15rem;
+}
+/*-------------------------EVERY NAV BUTTONS-------*/
+.navButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  color: white;
+}
+
+/*-------------------------TEST GENERAL BUTTONS-------*/
+.standardButton {
+  width: 3rem;
+  height: 3rem;
+}
+
+.clickedButton {
+  width: 2rem;
+  height: 2rem;
+}
+.textVisible {
+  display: block;
+}
+.textHidden {
+  display: none;
+}
+
+/*-------------------------HOME BUTTON-------*/
+.homeButton {
+  width: 3rem;
+  height: 3rem;
+}
+
+.homeClicked {
+  width: 2rem;
+  height: 2rem;
+}
+.homeVisible {
+  display: block;
+}
+.homeHidden {
+  display: none;
+}
+
+/*-------------------------CALENDAR BUTTON-------*/
+
+.calendarButton {
+  width: 3rem;
+  height: 3rem;
+  background-color: #38c6a3;
+}
+p.calendarButton {
+  display: none;
+}
+img.buttonClicked {
+  height: 2rem;
+  width: 2rem;
+}
+p.buttonClicked {
+  display: flex;
+}
+/*-------------------------ADD BUTTON-------*/
+
+.addButton {
+  width: 3rem;
+  height: 3rem;
+  margin-top: -6rem;
+}
+.addButtonBackground {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  background: #38c6a3;
+  margin-top: -2rem;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  -ms-border-radius: 6rem;
+  -o-border-radius: 6rem;
+}
+
+/*-------------------------TIMELINE BUTTON-------*/
+
+.timelineButton {
+  height: 3rem;
+  width: 3rem;
+}
+#timelineButtonRedirect {
+  height: 2rem;
+  width: 2rem;
+}
+/*-------------------------SETTINGS BUTTON-------*/
+
+.settingsButton {
+  height: 3rem;
+  width: 3rem;
+}
+#settingsButtonRedirect {
+  height: 2rem;
+  width: 2rem;
+}
