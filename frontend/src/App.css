@@ -47,8 +47,103 @@ body {
 .Journal .save {
   border-radius: 10px;
   background-color: #eb8f8f;
+}
+
+/* // */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;300;400&display=swap");
+
+:root {
+  --mint: #38c6a3;
+  --pink: #eb8f8f;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0px;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper {
+  background-color: #eb8f8f;
+  padding: 10px;
+  width: 380px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px #38c6a3;
+}
+
+.todolist h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.task-input {
+  outline: none;
+  width: 260px;
+  padding: 10px;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #95462e;
+  background-color: white;
+  border: 1px solid #38c6a3;
+  border-radius: 10px;
+}
+
+.button-add {
+  width: 70px;
+  padding: 10px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #38c6a3;
+  cursor: pointer;
   color: white;
   border: none;
   padding: 5px, 8px, 5px, 8px;
 }
+
 /* Fin Journal */
+
+.list-item {
+  display: flex;
+  margin: 20px 0;
+  border: 1px solid #38c6a3;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 30px;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.button-delete {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(255, 71, 71);
+  font-size: 20px;
+  border-radius: 8px;
+  margin: 0px;
+  color: white;
+  padding: 5px;
+}
+
+.list {
+  width: 220px;
+  background-color: white;
+  border: none;
+  color: #95462e;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
