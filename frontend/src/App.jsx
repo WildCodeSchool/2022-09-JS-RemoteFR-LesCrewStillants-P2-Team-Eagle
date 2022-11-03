@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import TodosList from "./components/TodosList";
+import AppNav from "./AppNav";
 
 function App() {
   const initialState = JSON.parse(localStorage.getItem("todos")) || [];
@@ -47,6 +48,7 @@ function App() {
           </div>
         </div>
       </div>
+      <AppNav />
     </div>
   );
 }
