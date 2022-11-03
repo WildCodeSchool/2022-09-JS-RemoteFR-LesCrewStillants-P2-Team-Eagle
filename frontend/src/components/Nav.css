@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  box-sizing: border-box;
-  background-color: #fbece6;
-}
 /*-------------------------NAV CONTAINER----------*/
 .navContainer {
   display: flex;
@@ -34,9 +29,11 @@ body {
   width: 2rem;
   height: 2rem;
 }
+
 .textVisible {
   display: block;
 }
+
 .textHidden {
   display: none;
 }
@@ -51,9 +48,11 @@ body {
   width: 2rem;
   height: 2rem;
 }
+
 .homeVisible {
   display: block;
 }
+
 .homeHidden {
   display: none;
 }
@@ -65,13 +64,16 @@ body {
   height: 3rem;
   background-color: #38c6a3;
 }
+
 p.calendarButton {
   display: none;
 }
+
 img.buttonClicked {
   height: 2rem;
   width: 2rem;
 }
+
 p.buttonClicked {
   display: flex;
 }
@@ -82,6 +84,7 @@ p.buttonClicked {
   height: 3rem;
   margin-top: -6rem;
 }
+
 .addButtonBackground {
   width: 6rem;
   height: 6rem;
@@ -92,25 +95,4 @@ p.buttonClicked {
   -moz-border-radius: 6rem;
   -ms-border-radius: 6rem;
   -o-border-radius: 6rem;
-}
-
-/*-------------------------TIMELINE BUTTON-------*/
-
-.timelineButton {
-  height: 3rem;
-  width: 3rem;
-}
-#timelineButtonRedirect {
-  height: 2rem;
-  width: 2rem;
-}
-/*-------------------------SETTINGS BUTTON-------*/
-
-.settingsButton {
-  height: 3rem;
-  width: 3rem;
-}
-#settingsButtonRedirect {
-  height: 2rem;
-  width: 2rem;
 }

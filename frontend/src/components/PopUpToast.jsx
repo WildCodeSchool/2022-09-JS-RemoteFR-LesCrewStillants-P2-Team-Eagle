@@ -1,5 +1,6 @@
-import "./PopUpToastStyle.css";
+import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
+import "./PopUpToastStyle.css";
 
 function PopUpToast({ closePopUp }) {
   return (
@@ -25,7 +26,7 @@ function PopUpToast({ closePopUp }) {
           ))}
         </div>
 
-        <textarea name="" id="" cols="30" rows="10" />
+        <Journal />
 
         <div className="exit">
           <button type="button" onClick={() => closePopUp(false)}>

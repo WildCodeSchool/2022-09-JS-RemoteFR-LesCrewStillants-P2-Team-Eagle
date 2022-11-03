@@ -1,36 +1,12 @@
-import Counter from "@components/Buttons/HomeButton";
-import logo from "@assets/logo.svg";
+import Home from "@pages/HomePopUp";
+import TodoList from "@components/Home/ToDoList/TodoList";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
+    <section id="HomePage">
+      <Home />
 
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+      <TodoList />
+    </section>
   );
 }
