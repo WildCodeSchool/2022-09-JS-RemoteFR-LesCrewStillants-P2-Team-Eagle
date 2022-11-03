@@ -1,16 +1,13 @@
-import Home from "@pages/HomePopUp";
-import Settings from "@pages/Settings";
+import HomePage from "@pages/Home";
 import Nav from "@components/Nav";
-import TodoList from "@components/Home/ToDoList/TodoList";
+import Settings from "@pages/Settings";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-
-      <TodoList />
+      <HomePage />
 
       <Settings />
 

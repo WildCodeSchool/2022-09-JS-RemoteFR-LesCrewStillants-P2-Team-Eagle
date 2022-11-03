@@ -1,13 +1,11 @@
 .containerToDo {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .containerToDo .app-wrapper {
   background-color: #eb8f8f;
   padding: 10px;
-  width: 380px;
   border-radius: 6px;
   box-shadow: 0 0 15px #38c6a3;
 }
@@ -19,7 +17,6 @@
 
 .containerToDo .task-input {
   outline: none;
-  width: 260px;
   padding: 10px;
   margin-right: 15px;
   font-size: 20px;
@@ -47,8 +44,7 @@
   margin: 20px 0;
   border: 1px solid #38c6a3;
   border-radius: 10px;
-  padding: 10px;
-  max-height: 30px;
+  padding: 4px;
   background-color: white;
   justify-content: space-between;
 }
@@ -57,15 +53,13 @@
   border: none;
   cursor: pointer;
   background-color: rgb(255, 71, 71);
-  font-size: 20px;
   border-radius: 8px;
   margin: 0px;
   color: white;
-  padding: 5px;
+  padding: 10px;
 }
 
 .containerToDo .list {
-  width: 220px;
   background-color: white;
   border: none;
   color: #95462e;
@@ -74,7 +68,7 @@
   margin-right: 15px;
 }
 
-.containerToDo input:focus,
+/* .containerToDo input:focus,
 .containerToDo button:focus {
   outline: none;
-}
+} */

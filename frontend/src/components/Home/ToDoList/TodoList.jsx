@@ -13,6 +13,7 @@ function TodoList() {
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+
   return (
     <div className="containerToDo">
       <div className="app-wrapper">
