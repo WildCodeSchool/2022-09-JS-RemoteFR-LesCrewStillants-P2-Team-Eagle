@@ -1,0 +1,39 @@
+/* Début Journal*/
+.Journal {
+  background-color: #fbece6;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.Journal span {
+  margin-top: 1rem;
+  color: #95462e;
+  font-weight: bold;
+}
+
+.Journal textarea {
+  background-color: #fbece6;
+  border: none;
+  resize: none;
+}
+
+.Journal textarea:focus {
+  outline: none;
+}
+
+/* save button */
+.Journal .save:hover {
+  background-color: #edb6b6;
+  cursor: pointer;
+}
+
+.Journal .save {
+  border-radius: 10px;
+  background-color: #eb8f8f;
+}
+
+/* Fin Journal */

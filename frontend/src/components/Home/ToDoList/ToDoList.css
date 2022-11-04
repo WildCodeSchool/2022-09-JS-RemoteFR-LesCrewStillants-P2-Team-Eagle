@@ -1,0 +1,75 @@
+.containerToDo {
+  display: flex;
+  justify-content: center;
+}
+
+.containerToDo .app-wrapper {
+  background-color: #eb8f8f;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px #38c6a3;
+}
+
+.containerToDo .todolist h1 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.containerToDo .task-input {
+  outline: none;
+  padding: 10px;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #95462e;
+  background-color: white;
+  border: 1px solid #38c6a3;
+  border-radius: 10px;
+}
+
+.containerToDo .button-add {
+  width: 70px;
+  padding: 10px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #38c6a3;
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 5px, 8px, 5px, 8px;
+}
+
+.containerToDo .list-item {
+  display: flex;
+  margin: 20px 0;
+  border: 1px solid #38c6a3;
+  border-radius: 10px;
+  padding: 4px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerToDo .button-delete {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(255, 71, 71);
+  border-radius: 8px;
+  margin: 0px;
+  color: white;
+  padding: 10px;
+}
+
+.containerToDo .list {
+  background-color: white;
+  border: none;
+  color: #95462e;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+/* .containerToDo input:focus,
+.containerToDo button:focus {
+  outline: none;
+} */

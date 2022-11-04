@@ -1,0 +1,65 @@
+/*-------------------------NAV CONTAINER----------*/
+.navContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #38c6a3;
+  padding: 0.5rem;
+  align-items: flex-start;
+  height: 4rem;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+}
+
+/*-------------------------EVERY NAV BUTTONS-------*/
+.navButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  color: white;
+}
+
+/*-------------------------TEST GENERAL BUTTONS-------*/
+.standardButton {
+  width: 3rem;
+  height: 3rem;
+}
+
+.clickedButton {
+  width: 2rem;
+  height: 2rem;
+}
+
+.textVisible {
+  visibility: visible;
+}
+
+.textHidden {
+  visibility: hidden;
+}
+
+/*-------------------------ADD BUTTON-------*/
+
+.addButton {
+  width: 3rem;
+  height: 3rem;
+}
+
+.addButtonBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 6rem;
+  background: #38c6a3;
+  margin-top: -2rem;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  -ms-border-radius: 6rem;
+  -o-border-radius: 6rem;
+}
