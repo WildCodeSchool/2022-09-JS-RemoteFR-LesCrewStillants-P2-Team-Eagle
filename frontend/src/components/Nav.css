@@ -1,14 +1,16 @@
 /*-------------------------NAV CONTAINER----------*/
 .navContainer {
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   background-color: #38c6a3;
   padding: 0.5rem;
   align-items: flex-start;
   height: 4rem;
-  margin-top: 15rem;
-  padding-bottom: 5rem;
+  position: fixed;
+  top: auto;
+  bottom: 0;
 }
 
 /*-------------------------EVERY NAV BUTTONS-------*/
@@ -33,11 +35,11 @@
 }
 
 .textVisible {
-  display: block;
+  visibility: visible;
 }
 
 .textHidden {
-  display: none;
+  visibility: hidden;
 }
 
 /*-------------------------ADD BUTTON-------*/
