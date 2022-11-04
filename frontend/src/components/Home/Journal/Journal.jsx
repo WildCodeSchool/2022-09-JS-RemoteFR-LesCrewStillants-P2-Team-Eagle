@@ -1,5 +1,3 @@
-/* eslint-disable react/button-has-type */
-
 import { useState } from "react";
 import "./Journal.css";
 
