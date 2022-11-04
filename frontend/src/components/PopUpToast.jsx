@@ -1,8 +1,22 @@
+import { useState } from "react";
 import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
 import "./PopUpToastStyle.css";
 
 function PopUpToast({ closePopUp }) {
+  // Toast
+  let moodChoice = 0;
+
+  function handleMoodChoice(event, keys) {
+    moodChoice = keys;
+  }
+
+  // Journal
+  const [noteText, setnoteText] = useState("");
+
+  function handlechange(event) {
+    setnoteText(event.target.value);
+  }
   return (
     <div className="popUpBackground">
       <div className="popUpContainer">
@@ -22,11 +36,13 @@ function PopUpToast({ closePopUp }) {
               src={toast.picture}
               width="40rem"
               height="40rem"
+              onClick={(event) => handleMoodChoice(event, toast.picture)}
+              aria-hidden="true"
             />
           ))}
         </div>
 
-        <Journal />
+        <Journal noteText={noteText} handlechange={() => handlechange} />
 
         <div className="exit">
           <button type="button" onClick={() => closePopUp(false)}>
@@ -34,6 +50,7 @@ function PopUpToast({ closePopUp }) {
           </button>
         </div>
       </div>
+      <img src={moodChoice} alt="" />
     </div>
   );
 }
