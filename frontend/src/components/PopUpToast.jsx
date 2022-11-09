@@ -1,10 +1,9 @@
 import { useState } from "react";
 import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
-import dataToasts from "./dataToasts";
 import "./PopUpToastStyle.css";
 
-function PopUpToast({ closePopUp }) {
+function PopUpToast({ closePopUp, dataToasts }) {
   // Toast
   const [moodChoice, setMoodChoice] = useState("./src/assets/MoodVeryGood.png");
 

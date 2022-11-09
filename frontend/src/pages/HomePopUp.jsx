@@ -1,13 +1,15 @@
 import { useState } from "react";
 import PopUpToast from "@components/PopUpToast";
 
-export default function Home() {
+export default function Home({ dataToasts }) {
   const [openPopUp, setOpenPopUp] = useState(false);
 
   return (
     <div>
       {/* clique sur l'image ouvre le popUp */}
-      {openPopUp && <PopUpToast closePopUp={setOpenPopUp} />}
+      {openPopUp && (
+        <PopUpToast closePopUp={setOpenPopUp} dataToasts={dataToasts} />
+      )}
       <img
         src="./src/assets/buttons/addToast.png"
         alt="Add your mood "

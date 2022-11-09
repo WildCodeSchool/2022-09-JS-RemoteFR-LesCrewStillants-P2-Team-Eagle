@@ -1,11 +1,11 @@
 // eslint-disable-next-line import/no-unresolved
 import Home from "@pages/HomePopUp";
 
-export default function AddButton() {
+export default function AddButton({ dataToasts }) {
   return (
     <div className="navButton">
       <p className="addButtonBackground">
-        <Home />
+        <Home dataToasts={dataToasts} />
       </p>
     </div>
   );

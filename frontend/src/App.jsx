@@ -47,8 +47,15 @@ function App() {
     setDataToasts(loadMood);
   };
 
+  function saveMood() {
+    localStorage.setItem("mood", JSON.stringify(dataToasts));
+  }
+
   useEffect(() => {
     loadData();
+    if (!localStorage.getItem("mood")) {
+      saveMood();
+    }
   });
 
   function handleClickHome() {
@@ -100,6 +107,7 @@ function App() {
         clickedButtonTimeline={clickedButtonTimeline}
         handleClickSettings={() => handleClickSettings}
         clickedButtonSettings={clickedButtonSettings}
+        dataToasts={dataToasts}
       />
     </div>
   );
