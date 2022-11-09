@@ -1,6 +1,4 @@
-import dataToasts from "./dataToasts";
-
-export default function DailyMood() {
+export default function DailyMood({ dataToasts }) {
   return (
     <section className="DailyMood">
       <img

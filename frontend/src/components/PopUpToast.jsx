@@ -31,14 +31,6 @@ function PopUpToast({ closePopUp }) {
     closePopUp(false);
   }
 
-  const loadData = () => {
-    if (!localStorage.getItem("mood")) return;
-    const loadMood = JSON.parse(localStorage.getItem("mood"));
-    dataToasts.map(loadMood);
-  };
-
-  window.addEventListener("load", loadData);
-
   return (
     <div className="popUpBackground">
       <div className="popUpContainer">

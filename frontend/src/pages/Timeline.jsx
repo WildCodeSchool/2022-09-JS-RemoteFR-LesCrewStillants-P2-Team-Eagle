@@ -1,8 +1,6 @@
-import dataToasts from "../components/dataToasts";
-
 import "@components/Timeline/Timeline.css";
 
-export default function Timeline({ clickedButtonTimeline }) {
+export default function Timeline({ clickedButtonTimeline, dataToasts }) {
   return (
     <section
       id="Timeline"
