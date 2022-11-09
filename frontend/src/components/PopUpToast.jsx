@@ -3,12 +3,19 @@ import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
 import "./PopUpToastStyle.css";
 
-function PopUpToast({ closePopUp }) {
+function PopUpToast({ closePopUp, dataToasts }) {
   // Toast
   const [moodChoice, setMoodChoice] = useState("./src/assets/MoodVeryGood.png");
+  const imgToasts = document.querySelectorAll("#toastCenter img");
 
-  function handleMoodChoice(event, keys) {
+  function handleMoodChoice(toast, keys) {
     setMoodChoice(keys);
+    if (toast.target.className === "clickedToast") {
+      toast.target.classList.remove("clickedToast");
+    } else {
+      imgToasts.forEach((element) => element.classList.remove("clickedToast"));
+      toast.target.classList.add("clickedToast");
+    }
   }
 
   // Journal
@@ -21,10 +28,11 @@ function PopUpToast({ closePopUp }) {
   }
 
   function saveMood() {
-    localStorage.setItem("mood", JSON.stringify(dailyData));
+    localStorage.setItem("mood", JSON.stringify(dataToasts));
   }
 
   function handleClick() {
+    dataToasts.unshift(dailyData);
     saveMood();
     closePopUp(false);
   }
