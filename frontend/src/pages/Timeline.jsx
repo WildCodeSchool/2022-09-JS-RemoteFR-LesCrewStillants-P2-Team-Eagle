@@ -1,5 +1,7 @@
 import dataToasts from "../components/dataToasts";
 
+import "@components/Timeline/Timeline.css";
+
 export default function Timeline({ clickedButtonTimeline }) {
   return (
     <section
@@ -7,11 +9,20 @@ export default function Timeline({ clickedButtonTimeline }) {
       className={clickedButtonTimeline ? "homeVisible" : "homeHidden"}
     >
       {dataToasts.map((toast, index) => (
-        <>
-          <img alt="moodToast" keys={index} src={toast.picture} width="32px" />
-          <p className="journalToast">{toast.note}</p>
-          <p className="dateToast">{toast.date}</p>
-        </>
+        <div>
+          <p className="imgTimeline">
+            <p>
+              <img
+                alt="moodTimeline"
+                keys={index}
+                src={toast.picture}
+                width="36px"
+              />
+            </p>
+          </p>
+          <p className="journalTimeline">{toast.note}</p>
+          <p className="dateTimeline">{toast.date}</p>
+        </div>
       ))}
     </section>
   );
