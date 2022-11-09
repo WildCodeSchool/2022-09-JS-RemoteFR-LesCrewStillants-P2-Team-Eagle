@@ -5,7 +5,7 @@ export default function Home({ dataToasts }) {
   const [openPopUp, setOpenPopUp] = useState(false);
 
   return (
-    <div>
+    <div id="addToast">
       {/* clique sur l'image ouvre le popUp */}
       {openPopUp && (
         <PopUpToast closePopUp={setOpenPopUp} dataToasts={dataToasts} />

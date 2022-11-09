@@ -4,9 +4,10 @@ import Home from "@pages/HomePopUp";
 export default function AddButton({ dataToasts }) {
   return (
     <div className="navButton">
-      <p className="addButtonBackground">
-        <Home dataToasts={dataToasts} />
-      </p>
+      {/* <p className="addButtonBorder"> */}
+      <Home dataToasts={dataToasts} />
+      <p className="addButtonBackground"> </p>
+      {/* </p> */}
     </div>
   );
 }
