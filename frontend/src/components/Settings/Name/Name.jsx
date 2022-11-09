@@ -21,7 +21,7 @@ function Name() {
 
   useEffect(() => {
     loadData();
-  });
+  }, []);
 
   // Function for registering a new UserName.
   function handleClick(event) {
