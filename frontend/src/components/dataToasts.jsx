@@ -26,4 +26,17 @@ const dataToasts = [
   },
 ];
 
+// const loadData = () => {
+//   if (!localStorage.getItem("mood")) return;
+//   const loadMood = JSON.parse(localStorage.getItem("mood"));
+//   dataToasts.unshift(loadMood);
+//   console.log(dataToasts);
+// };
+
+// // window.addEventListener("load", loadData);
+
+// useEffect(() => {
+//   loadData();
+// });
+
 export default dataToasts;
