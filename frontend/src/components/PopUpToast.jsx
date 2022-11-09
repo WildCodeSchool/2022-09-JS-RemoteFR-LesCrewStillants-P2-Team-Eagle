@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
+import dataToasts from "./dataToasts";
 import "./PopUpToastStyle.css";
 
 function PopUpToast({ closePopUp }) {
@@ -21,13 +22,22 @@ function PopUpToast({ closePopUp }) {
   }
 
   function saveMood() {
-    localStorage.setItem("mood", JSON.stringify(dailyData));
+    localStorage.setItem("mood", JSON.stringify(dataToasts));
   }
 
   function handleClick() {
+    dataToasts.unshift(dailyData);
     saveMood();
     closePopUp(false);
   }
+
+  const loadData = () => {
+    if (!localStorage.getItem("mood")) return;
+    const loadMood = JSON.parse(localStorage.getItem("mood"));
+    dataToasts.map(loadMood);
+  };
+
+  window.addEventListener("load", loadData);
 
   return (
     <div className="popUpBackground">
