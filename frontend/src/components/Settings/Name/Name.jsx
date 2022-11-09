@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Name.css";
 
 function Name() {
@@ -19,7 +19,9 @@ function Name() {
     setName(loadName);
   };
 
-  window.addEventListener("load", loadData);
+  useEffect(() => {
+    loadData();
+  }, []);
 
   // Function for registering a new UserName.
   function handleClick(event) {

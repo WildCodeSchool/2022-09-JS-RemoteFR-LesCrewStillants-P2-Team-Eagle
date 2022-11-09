@@ -1,15 +1,6 @@
-/* eslint-disable react/button-has-type */
-
-import { useState } from "react";
 import "./Journal.css";
 
-function Journal() {
-  const [noteText, setnoteText] = useState("");
-
-  function handlechange(event) {
-    setnoteText(event.target.value);
-  }
-
+function Journal({ noteText, handlechange }) {
   return (
     <div className="Journal">
       <span> Tell me more : </span>
@@ -18,7 +9,7 @@ function Journal() {
         column="10"
         placeholder="type to add a note..."
         value={noteText}
-        onChange={handlechange}
+        onChange={handlechange()}
       />
     </div>
   );

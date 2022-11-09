@@ -15,6 +15,7 @@ export default function Nav({
   clickedButtonTimeline,
   handleClickSettings,
   clickedButtonSettings,
+  dataToasts,
 }) {
   return (
     <div className="navContainer">
@@ -26,7 +27,7 @@ export default function Nav({
         handleClick={() => handleClickCalendar()}
         clickedButton={clickedButtonCalendar}
       />
-      <AddButton />
+      <AddButton dataToasts={dataToasts} />
       <TimelineButton
         handleClick={() => handleClickTimeline()}
         clickedButton={clickedButtonTimeline}
