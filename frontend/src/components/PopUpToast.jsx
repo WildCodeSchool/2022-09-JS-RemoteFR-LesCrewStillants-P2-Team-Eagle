@@ -6,9 +6,16 @@ import "./PopUpToastStyle.css";
 function PopUpToast({ closePopUp, dataToasts }) {
   // Toast
   const [moodChoice, setMoodChoice] = useState("./src/assets/MoodVeryGood.png");
+  const imgToasts = document.querySelectorAll("#toastCenter img");
 
-  function handleMoodChoice(event, keys) {
+  function handleMoodChoice(toast, keys) {
     setMoodChoice(keys);
+    if (toast.target.className === "clickedToast") {
+      toast.target.classList.remove("clickedToast");
+    } else {
+      imgToasts.forEach((element) => element.classList.remove("clickedToast"));
+      toast.target.classList.add("clickedToast");
+    }
   }
 
   // Journal
