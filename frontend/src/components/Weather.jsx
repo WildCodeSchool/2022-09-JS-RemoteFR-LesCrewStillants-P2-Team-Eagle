@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+import "./Weather.css";
+
 export default function Weather() {
   const sampleWeather = {
     weather: [
@@ -32,15 +34,16 @@ export default function Weather() {
     getWeather();
   }, []);
   return (
-    <div>
-      <h1> {weather.name} </h1>
+    <section id="Weather">
       <img
         src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
         alt="Today's weather"
+        width="180px"
       />
-      <p> {weather.weather[0].description} </p>
-      {/* <li> Temperature min : {weather.main.temp_min} </li>
-      <li> Temperature max : {weather.main.temp_max} </li> */}
-    </div>
+      <h1>
+        {weather.name}, {Math.floor(weather.main.temp)}°{" "}
+      </h1>
+      <p>{weather.weather[0].description}</p>
+    </section>
   );
 }

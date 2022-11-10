@@ -16,28 +16,28 @@ function App() {
   const [dataToasts, setDataToasts] = useState([
     {
       picture: "./src/assets/MoodVeryGood.png",
-      note: "blablabla",
-      date: "04/11/2022",
-    },
-    {
-      picture: "./src/assets/MoodGood.png",
-      note: "blablabla zzzzzzzzz zzzzzzzz zzzzzz",
-      date: "04/11/2022",
+      note: "This was my best day ever! 🎈🎢",
+      date: "09/11/2022",
     },
     {
       picture: "./src/assets/MoodNotGoodNotBad.png",
-      note: "blablablafezz zzzzzzzzz zzzzzzzzzzzz zzzzzzzzzzz zzzzzzzzzzzzz zzzzzzzz zzzzzz zzzzzzzzz zzzzzzzzzzzzzz zzzzzzzzzzzzzz zzzzzzzzzzzzzzzz zzzzzzzzzzzzzz zzzzzzzzzzzz",
-      date: "04/11/2022",
+      note: "I’m not always happy but when I am, I’m not.",
+      date: "08/11/2022",
     },
     {
       picture: "./src/assets/MoodBad.png",
-      note: "blablabla",
-      date: "04/11/2022",
+      note: "Everything went bad today... 😭",
+      date: "07/11/2022",
     },
     {
-      picture: "./src/assets/MoodVeryBad.png",
-      note: "blablabla",
-      date: "04/11/2022",
+      picture: "./src/assets/MoodGood.png",
+      note: "That was such a good day! XOXO",
+      date: "06/11/2022",
+    },
+    {
+      picture: "./src/assets/MoodGood.png",
+      note: "This is my first Entry! OwO",
+      date: "05/11/2022",
     },
   ]);
 

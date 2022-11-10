@@ -23,16 +23,17 @@ function Name() {
     loadData();
   }, []);
 
+  // Function to hide/show the change name Area.
+  function handleHide(event) {
+    event.preventDefault();
+    setIsHiding(!isHiding);
+  }
+
   // Function for registering a new UserName.
   function handleClick(event) {
     event.preventDefault();
     setName(newName);
     saveName();
-  }
-
-  // Function to hide/show the change name Area.
-  function handleHide(event) {
-    event.preventDefault();
     setIsHiding(!isHiding);
   }
 
