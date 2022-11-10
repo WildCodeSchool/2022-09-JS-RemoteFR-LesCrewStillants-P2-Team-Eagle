@@ -33,16 +33,31 @@ export default function Weather() {
   useEffect(() => {
     getWeather();
   }, []);
+
+  const [name, setName] = useState("User");
+  const loadData = () => {
+    if (!localStorage.getItem("name")) return;
+
+    const loadName = JSON.parse(localStorage.getItem("name"));
+
+    setName(loadName);
+  };
+
+  useEffect(() => {
+    loadData();
+  });
+
   return (
     <section id="Weather">
+      <h1>Hello {name}!</h1>
       <img
         src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
         alt="Today's weather"
         width="180px"
       />
-      <h1>
+      <h2>
         {weather.name}, {Math.floor(weather.main.temp)}°{" "}
-      </h1>
+      </h2>
       <p>{weather.weather[0].description}</p>
     </section>
   );
