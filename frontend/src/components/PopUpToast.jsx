@@ -21,7 +21,7 @@ function PopUpToast({ closePopUp, dataToasts }) {
   // Journal
   const [noteText, setnoteText] = useState("");
 
-  const dailyData = { picture: moodChoice, note: noteText, date: "04/11/2022" };
+  const dailyData = { picture: moodChoice, note: noteText, date: "10/11/2022" };
 
   function handlechange(event) {
     setnoteText(event.target.value);

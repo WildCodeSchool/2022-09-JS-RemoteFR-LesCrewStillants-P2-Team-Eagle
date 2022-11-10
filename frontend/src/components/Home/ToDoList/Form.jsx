@@ -16,7 +16,7 @@ function Form({ input, setInput, todos, setTodos }) {
     <form onSubmit={onFormSubmit}>
       <input
         type="text"
-        placeholder="Add To Do List ..."
+        placeholder="Add a task"
         className="task-input"
         value={input}
         required
