@@ -8,3 +8,7 @@
 #Weather img {
   margin: -2rem;
 }
+
+#Weather p {
+  text-align: center;
+}
