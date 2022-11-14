@@ -12,44 +12,44 @@ export default function Weather() {
     {
       weatherTip:
         "Sunshine is everywhere! Maybe you should take your sunglasses!",
-      backgroundPicture: "./src/assets/MoodVeryGood.png",
+      backgroundPicture: "./src/assets/backgrounds/Sunny.gif",
     },
     {
       weatherTip:
         "There are just few clouds today! But sun rays are still there, don't let them deceives you!",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Sun-And-Clouds.gif",
     },
     {
       weatherTip:
         "Half clouds, half sun. With such diversity nothing should happen today.",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Half-Sun-Half-Clouds.gif",
     },
     {
       weatherTip:
         "Clouds... Clouds everywhere! It may rains if the clouds are dark!",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Cloudy.gif",
     },
     {
       weatherTip:
         "There's a bit of rain, but normally not too much. Covering your head should be enough.",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Slight-Rain.gif",
     },
     {
       weatherTip: "It's raining today! You should take an umbrella!",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Rain.gif",
     },
     {
       weatherTip: "There's a thunderstorm out there! Take care of lightning!",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Thunderstorm.gif",
     },
     {
       weatherTip:
         "Snow is falling today! You should put warm clothes and maybe do a snowman!",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Snow.gif",
     },
     {
       weatherTip: "It's foggy today, pay more attention than ever!",
-      backgroundPicture: "",
+      backgroundPicture: "./src/assets/backgrounds/Fog.gif",
     },
   ];
 
@@ -180,8 +180,8 @@ export default function Weather() {
       <h2>
         {weather.name}, {Math.floor(weather.main.temp)}°{" "}
       </h2>
-      <p>{weather.weather[0].description}</p>
-      <p>{weatherTip}</p>
+      {/* <p>{weather.weather[0].description}</p> */}
+      <p id="WeatherTip">{weatherTip}</p>
     </section>
   );
 }
