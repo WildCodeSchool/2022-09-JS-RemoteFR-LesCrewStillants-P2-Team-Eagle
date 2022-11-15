@@ -1,7 +1,7 @@
 import Name from "@components/Settings/Name/Name";
 import Faq from "@components/Settings/Faq/Faq";
-import Localisation from "@components/Settings/weatherapi/localisation";
 import "@components/Settings/Settings.css";
+import Localisation from "@components/Settings/weatherapi/localisation";
 
 export default function Settings({
   clickedButtonSettings,
@@ -16,6 +16,7 @@ export default function Settings({
       <h1>SETTINGS</h1>
       <h2>Personalize</h2>
       <Name />
+      <Localisation location={location} setLocation={setLocation} />
       <h2>Information</h2>
       <Faq />
     </section>

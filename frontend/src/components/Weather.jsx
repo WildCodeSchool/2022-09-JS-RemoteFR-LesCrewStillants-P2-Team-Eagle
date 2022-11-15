@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 import "./Weather.css";
 
-
 export default function Weather({ location }) {
   // Objects Array, will contain background pictures and daily tip based on weather.
   const [weatherTip, setWeatherTip] = useState("");
