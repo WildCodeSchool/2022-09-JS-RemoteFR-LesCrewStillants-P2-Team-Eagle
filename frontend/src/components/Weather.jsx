@@ -180,7 +180,6 @@ export default function Weather() {
       <h2>
         {weather.name}, {Math.floor(weather.main.temp)}°{" "}
       </h2>
-      {/* <p>{weather.weather[0].description}</p> */}
       <p id="WeatherTip">{weatherTip}</p>
     </section>
   );
