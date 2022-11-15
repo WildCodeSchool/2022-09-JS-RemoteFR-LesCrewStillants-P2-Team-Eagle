@@ -10,7 +10,7 @@
 
 #Weather img {
   margin: -2rem;
-  filter: drop-shadow(0 0 0.75rem #95462e);
+  filter: drop-shadow(0 0 0.75rem #918b8a);
 }
 
 #Weather h2 {
@@ -22,7 +22,6 @@
 #Weather h1 {
   text-align: center;
   background-color: #ffffffbe;
-  border: 1px solid #38c6a2bd;
   border-radius: 8px;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
