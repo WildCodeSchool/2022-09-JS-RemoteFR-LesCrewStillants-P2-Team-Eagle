@@ -13,7 +13,7 @@ function App() {
   const [clickedButtonTimeline, setClickedButtonTimeline] = useState(false);
   const [clickedButtonSettings, setClickedButtonSettings] = useState(false);
 
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Paris");
 
   const [dataToasts, setDataToasts] = useState([
     {
