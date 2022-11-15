@@ -3,22 +3,74 @@ import { useState, useEffect } from "react";
 
 import "./Weather.css";
 
+
 export default function Weather({ location }) {
+  // Objects Array, will contain background pictures and daily tip based on weather.
+  const [weatherTip, setWeatherTip] = useState("");
+  const [backgroundPicture, setBackgroundPicture] = useState("");
+
+  const weatherExtra = [
+    {
+      weatherTip:
+        "Sunshine is everywhere! Maybe you should take your sunglasses!",
+      backgroundPicture: "./src/assets/backgrounds/Sunny.gif",
+    },
+    {
+      weatherTip:
+        "There are just few clouds today! But sun rays are still there, don't let them deceives you!",
+      backgroundPicture: "./src/assets/backgrounds/Sun-And-Clouds.gif",
+    },
+    {
+      weatherTip:
+        "Half clouds, half sun. With such diversity nothing should happen today.",
+      backgroundPicture: "./src/assets/backgrounds/Half-Sun-Half-Clouds.gif",
+    },
+    {
+      weatherTip:
+        "Clouds... Clouds everywhere! It may rains if the clouds are dark!",
+      backgroundPicture: "./src/assets/backgrounds/Cloudy.gif",
+    },
+    {
+      weatherTip:
+        "There's a bit of rain, but normally not too much. Covering your head should be enough.",
+      backgroundPicture: "./src/assets/backgrounds/Slight-Rain.gif",
+    },
+    {
+      weatherTip: "It's raining today! You should take an umbrella!",
+      backgroundPicture: "./src/assets/backgrounds/Rain.gif",
+    },
+    {
+      weatherTip: "There's a thunderstorm out there! Take care of lightning!",
+      backgroundPicture: "./src/assets/backgrounds/Thunderstorm.gif",
+    },
+    {
+      weatherTip:
+        "Snow is falling today! You should put warm clothes and maybe do a snowman!",
+      backgroundPicture: "./src/assets/backgrounds/Snow.gif",
+    },
+    {
+      weatherTip: "It's foggy today, pay more attention than ever!",
+      backgroundPicture: "./src/assets/backgrounds/Fog.gif",
+    },
+  ];
+
+  // sample weather, in case nothing load
   const sampleWeather = {
     weather: [
       {
         id: 501,
         main: "Rain",
-        description: "moderate rain",
+        description: "Moderate rain",
         icon: "10d",
       },
     ],
     main: {
-      temp_min: 297.56,
-      temp_max: 300.05,
+      temp: 20,
     },
     name: "Paris",
   };
+
+  // Featch Api + useEffect when component load.
   const [weather, setWeather] = useState(sampleWeather);
   const getWeather = () => {
     axios
@@ -30,10 +82,78 @@ export default function Weather({ location }) {
         setWeather(data);
       });
   };
+
   useEffect(() => {
     getWeather();
   }, [location]);
 
+  useEffect(() => {
+    if (
+      weather.weather[0].icon === "01d" ||
+      weather.weather[0].icon === "01n"
+    ) {
+      setWeatherTip(weatherExtra[0].weatherTip);
+      setBackgroundPicture(weatherExtra[0].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "02d" ||
+      weather.weather[0].icon === "02n"
+    ) {
+      setWeatherTip(weatherExtra[1].weatherTip);
+      setBackgroundPicture(weatherExtra[1].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "03d" ||
+      weather.weather[0].icon === "03n"
+    ) {
+      setWeatherTip(weatherExtra[2].weatherTip);
+      setBackgroundPicture(weatherExtra[2].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "04d" ||
+      weather.weather[0].icon === "04n"
+    ) {
+      setWeatherTip(weatherExtra[3].weatherTip);
+      setBackgroundPicture(weatherExtra[3].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "09d" ||
+      weather.weather[0].icon === "09n"
+    ) {
+      setWeatherTip(weatherExtra[4].weatherTip);
+      setBackgroundPicture(weatherExtra[4].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "10d" ||
+      weather.weather[0].icon === "10n"
+    ) {
+      setWeatherTip(weatherExtra[5].weatherTip);
+      setBackgroundPicture(weatherExtra[5].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "11d" ||
+      weather.weather[0].icon === "11n"
+    ) {
+      setWeatherTip(weatherExtra[6].weatherTip);
+      setBackgroundPicture(weatherExtra[6].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "13d" ||
+      weather.weather[0].icon === "13n"
+    ) {
+      setWeatherTip(weatherExtra[7].weatherTip);
+      setBackgroundPicture(weatherExtra[7].backgroundPicture);
+    }
+    if (
+      weather.weather[0].icon === "50d" ||
+      weather.weather[0].icon === "50n"
+    ) {
+      setWeatherTip(weatherExtra[8].weatherTip);
+      setBackgroundPicture(weatherExtra[8].backgroundPicture);
+    }
+  }, [getWeather]);
+
+  // Local storage load of User name
   const [name, setName] = useState("User");
   const loadData = () => {
     if (!localStorage.getItem("name")) return;
@@ -48,7 +168,10 @@ export default function Weather({ location }) {
   });
 
   return (
-    <section id="Weather">
+    <section
+      id="Weather"
+      style={{ backgroundImage: `url(${backgroundPicture})` }}
+    >
       <h1>Hello {name}!</h1>
       <img
         src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
@@ -58,7 +181,7 @@ export default function Weather({ location }) {
       <h2>
         {weather.name}, {Math.floor(weather.main.temp)}°{" "}
       </h2>
-      <p>{weather.weather[0].description}</p>
+      <p id="WeatherTip">{weatherTip}</p>
     </section>
   );
 }

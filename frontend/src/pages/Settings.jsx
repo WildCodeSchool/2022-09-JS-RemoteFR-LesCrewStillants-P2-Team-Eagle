@@ -14,10 +14,9 @@ export default function Settings({
       className={clickedButtonSettings ? "homeVisible" : "homeHidden"}
     >
       <h1>SETTINGS</h1>
-      <h2>Personnaliser</h2>
+      <h2>Personalize</h2>
       <Name />
-      <Localisation location={location} setLocation={setLocation} />
-      <h2>Informations</h2>
+      <h2>Information</h2>
       <Faq />
     </section>
   );
