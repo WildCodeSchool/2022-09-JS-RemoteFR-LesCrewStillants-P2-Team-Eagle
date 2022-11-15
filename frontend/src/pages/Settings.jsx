@@ -10,9 +10,9 @@ export default function Settings({ clickedButtonSettings }) {
       className={clickedButtonSettings ? "homeVisible" : "homeHidden"}
     >
       <h1>SETTINGS</h1>
-      <h2>Personnaliser</h2>
+      <h2>Personalize</h2>
       <Name />
-      <h2>Informations</h2>
+      <h2>Information</h2>
       <Faq />
     </section>
   );

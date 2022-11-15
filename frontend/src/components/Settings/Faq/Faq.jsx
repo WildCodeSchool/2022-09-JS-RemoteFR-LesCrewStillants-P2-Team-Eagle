@@ -13,7 +13,7 @@ function Faq() {
   return (
     <div className="Faq">
       <p onClick={handleHide} aria-hidden="true">
-        <span>Faq </span>
+        <span>Frequently Asked Questions</span>
         <span className={isHiding === false ? "" : "rotate"}>V</span>
       </p>
       <p className={isHiding === true ? "visible" : "hidden"}>
