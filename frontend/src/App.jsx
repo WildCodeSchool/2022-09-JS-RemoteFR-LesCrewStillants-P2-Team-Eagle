@@ -13,6 +13,8 @@ function App() {
   const [clickedButtonTimeline, setClickedButtonTimeline] = useState(false);
   const [clickedButtonSettings, setClickedButtonSettings] = useState(false);
 
+  const [location, setLocation] = useState("");
+
   const [dataToasts, setDataToasts] = useState([
     {
       picture: "./src/assets/MoodVeryGood.png",
@@ -87,7 +89,11 @@ function App() {
   }
   return (
     <div className="App">
-      <HomePage clickedButtonHome={clickedButtonHome} dataToasts={dataToasts} />
+      <HomePage
+        clickedButtonHome={clickedButtonHome}
+        dataToasts={dataToasts}
+        location={location}
+      />
 
       <Calendar clickedButtonCalendar={clickedButtonCalendar} />
 
@@ -96,7 +102,11 @@ function App() {
         dataToasts={dataToasts}
       />
 
-      <Settings clickedButtonSettings={clickedButtonSettings} />
+      <Settings
+        clickedButtonSettings={clickedButtonSettings}
+        location={location}
+        setLocation={setLocation}
+      />
 
       <Nav
         handleClickHome={() => handleClickHome}
