@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./localisation.css";
 
 function Localisation({ location, setLocation }) {
@@ -10,18 +10,6 @@ function Localisation({ location, setLocation }) {
   function saveLocation() {
     localStorage.setItem("location", JSON.stringify(newLocation));
   }
-
-  const loadData = () => {
-    if (!localStorage.getItem("location")) return;
-
-    const loadLocation = JSON.parse(localStorage.getItem("location"));
-
-    setLocation(loadLocation);
-  };
-
-  useEffect(() => {
-    loadData();
-  }, []);
 
   function handleHide(event) {
     event.preventDefault();
