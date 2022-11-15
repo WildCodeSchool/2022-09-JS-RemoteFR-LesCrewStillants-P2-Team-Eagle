@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import "./localisation.css";
 
-function Localisation() {
-  const [location, setLocation] = useState("");
+function Localisation({ location, setLocation }) {
   const [newLocation, setNewLocation] = useState("");
+  const [isHiding, setIsHiding] = useState(false);
+
+  // local sto
 
   function saveLocation() {
     localStorage.setItem("location", JSON.stringify(newLocation));
@@ -21,25 +23,36 @@ function Localisation() {
     loadData();
   }, []);
 
+  function handleHide(event) {
+    event.preventDefault();
+    setIsHiding(!isHiding);
+  }
+
   function handleClick(event) {
     event.preventDefault();
-    setLocation(newLocation);
-    saveLocation();
+    if (newLocation !== "") {
+      setLocation(newLocation);
+      saveLocation();
+      setIsHiding(!isHiding);
+    }
   }
+
   return (
     <div className="localisation">
       <p>
-        Localisation : {location}
-        <button type="button">Modify</button>
+        📍 Location : {location}
+        <button type="button" onClick={handleHide}>
+          Change
+        </button>
       </p>
 
-      <form className="visible">
+      <form className={isHiding === true ? "visible" : "hidden"}>
         <label type="location" name="city">
           {" "}
         </label>
         <input
           type="text"
-          placeholder="city"
+          placeholder="enter location"
           value={newLocation}
           onChange={(event) => setNewLocation(event.target.value)}
         />

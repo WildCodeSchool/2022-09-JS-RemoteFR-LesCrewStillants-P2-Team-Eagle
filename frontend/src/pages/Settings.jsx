@@ -3,7 +3,11 @@ import Faq from "@components/Settings/Faq/Faq";
 import Localisation from "@components/Settings/weatherapi/localisation";
 import "@components/Settings/Settings.css";
 
-export default function Settings({ clickedButtonSettings }) {
+export default function Settings({
+  clickedButtonSettings,
+  location,
+  setLocation,
+}) {
   return (
     <section
       id="Settings"
@@ -12,7 +16,7 @@ export default function Settings({ clickedButtonSettings }) {
       <h1>SETTINGS</h1>
       <h2>Personnaliser</h2>
       <Name />
-      <Localisation />
+      <Localisation location={location} setLocation={setLocation} />
       <h2>Informations</h2>
       <Faq />
     </section>

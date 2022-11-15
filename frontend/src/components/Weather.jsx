@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather({ location }) {
   const sampleWeather = {
     weather: [
       {
@@ -23,7 +23,7 @@ export default function Weather() {
   const getWeather = () => {
     axios
       .get(
-        "https://api.openweathermap.org/data/2.5/weather?q=Paris&lang=en&appid=4d1a6b3d37f082fd902170acfa8c7e1d&units=metric"
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=4d1a6b3d37f082fd902170acfa8c7e1d&units=metric`
       )
       .then((res) => res.data)
       .then((data) => {
@@ -32,7 +32,7 @@ export default function Weather() {
   };
   useEffect(() => {
     getWeather();
-  }, []);
+  }, [location]);
 
   const [name, setName] = useState("User");
   const loadData = () => {
