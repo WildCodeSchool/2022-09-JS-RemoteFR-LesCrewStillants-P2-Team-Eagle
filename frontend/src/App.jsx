@@ -13,7 +13,7 @@ function App() {
   const [clickedButtonTimeline, setClickedButtonTimeline] = useState(false);
   const [clickedButtonSettings, setClickedButtonSettings] = useState(false);
 
-  const [location, setLocation] = useState("Paris");
+  const [location, setLocation] = useState("");
 
   const [dataToasts, setDataToasts] = useState([
     {
@@ -43,11 +43,12 @@ function App() {
     },
   ]);
 
-  const loadData = () => {
+  // Mood load and save functions
+  function loadData() {
     if (!localStorage.getItem("mood")) return;
     const loadMood = JSON.parse(localStorage.getItem("mood"));
     setDataToasts(loadMood);
-  };
+  }
 
   function saveMood() {
     localStorage.setItem("mood", JSON.stringify(dataToasts));
@@ -60,6 +61,22 @@ function App() {
     }
   });
 
+  // Function Load City for API and Settings
+  function loadCity() {
+    if (!localStorage.getItem("location")) {
+      localStorage.setItem("location", JSON.stringify("Paris"));
+    }
+
+    const loadLocation = JSON.parse(localStorage.getItem("location"));
+
+    setLocation(loadLocation);
+  }
+
+  useEffect(() => {
+    loadCity();
+  }, []);
+
+  // Handle Menu functions
   function handleClickHome() {
     setClickedButtonHome(true);
     setClickedButtonCalendar(false);

@@ -74,7 +74,7 @@ export default function Weather({ location }) {
   const getWeather = () => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=4d1a6b3d37f082fd902170acfa8c7e1d&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=cfabb61122ea2cb8834a911a754e5cd5&units=metric`
       )
       .then((res) => res.data)
       .then((data) => {
