@@ -6,16 +6,11 @@ export default function Timeline({ clickedButtonTimeline, dataToasts }) {
       id="Timeline"
       className={clickedButtonTimeline ? "homeVisible" : "homeHidden"}
     >
-      {dataToasts.map((toast, index) => (
+      {dataToasts.map((toast) => (
         <div>
           <p className="imgTimeline">
             <p>
-              <img
-                alt="moodTimeline"
-                keys={index}
-                src={toast.picture}
-                width="36px"
-              />
+              <img alt="moodTimeline" src={toast.picture} width="36px" />
             </p>
           </p>
           <p className="journalTimeline">{toast.note}</p>

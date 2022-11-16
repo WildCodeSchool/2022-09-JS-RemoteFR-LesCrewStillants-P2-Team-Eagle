@@ -112,7 +112,10 @@ function App() {
         location={location}
       />
 
-      <Calendar clickedButtonCalendar={clickedButtonCalendar} />
+      <Calendar
+        clickedButtonCalendar={clickedButtonCalendar}
+        dataToasts={dataToasts}
+      />
 
       <Timeline
         clickedButtonTimeline={clickedButtonTimeline}
