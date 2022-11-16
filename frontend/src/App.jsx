@@ -15,12 +15,12 @@ function App() {
 
   const [location, setLocation] = useState("");
 
+  // Sample weather in case API broken
   const sampleWeather = {
     weather: [
       {
         id: 501,
         main: "Rain",
-        // description: "Moderate rain",
         icon: "10d",
       },
     ],

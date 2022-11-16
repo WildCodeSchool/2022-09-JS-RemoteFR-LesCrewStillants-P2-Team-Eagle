@@ -19,7 +19,6 @@ export default function Timeline({ clickedButtonTimeline, dataToasts }) {
                 src={`http://openweathermap.org/img/wn/${toast.iconWeather}@4x.png`}
                 width="36px"
               />
-              {/* {console.log(toast)} */}
             </p>
           </p>
           <p className="journalTimeline">{toast.note}</p>

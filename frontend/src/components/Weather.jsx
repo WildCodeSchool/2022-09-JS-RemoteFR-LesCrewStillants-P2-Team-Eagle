@@ -53,8 +53,6 @@ export default function Weather({ location, weather, setWeather }) {
     },
   ];
 
-  // sample weather, in case nothing load
-
   // Featch Api + useEffect when component load.
   const getWeather = () => {
     axios
