@@ -12,6 +12,14 @@ export default function Timeline({ clickedButtonTimeline, dataToasts }) {
             <p>
               <img alt="moodTimeline" src={toast.picture} width="36px" />
             </p>
+
+            <p>
+              <img
+                alt="weatherTimeline"
+                src={`http://openweathermap.org/img/wn/${toast.iconWeather}@4x.png`}
+                width="36px"
+              />
+            </p>
           </p>
           <p className="journalTimeline">{toast.note}</p>
           <p className="dateTimeline">{toast.date}</p>
