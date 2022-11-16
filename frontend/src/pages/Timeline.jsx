@@ -6,16 +6,20 @@ export default function Timeline({ clickedButtonTimeline, dataToasts }) {
       id="Timeline"
       className={clickedButtonTimeline ? "homeVisible" : "homeHidden"}
     >
-      {dataToasts.map((toast, index) => (
+      {dataToasts.map((toast) => (
         <div>
           <p className="imgTimeline">
             <p>
+              <img alt="moodTimeline" src={toast.picture} width="36px" />
+            </p>
+
+            <p>
               <img
-                alt="moodTimeline"
-                keys={index}
-                src={toast.picture}
+                alt="weatherTimeline"
+                src={`http://openweathermap.org/img/wn/${toast.iconWeather}@4x.png`}
                 width="36px"
               />
+              {/* {console.log(toast)} */}
             </p>
           </p>
           <p className="journalTimeline">{toast.note}</p>

@@ -15,31 +15,52 @@ function App() {
 
   const [location, setLocation] = useState("");
 
+  const sampleWeather = {
+    weather: [
+      {
+        id: 501,
+        main: "Rain",
+        // description: "Moderate rain",
+        icon: "10d",
+      },
+    ],
+    main: {
+      temp: 20,
+    },
+    name: "Paris",
+  };
+  const [weather, setWeather] = useState(sampleWeather);
+
   const [dataToasts, setDataToasts] = useState([
     {
       picture: "./src/assets/MoodVeryGood.png",
       note: "This was my best day ever! 🎈🎢",
       date: "09/11/2022",
+      iconWeather: "11d",
     },
     {
       picture: "./src/assets/MoodNotGoodNotBad.png",
       note: "I’m not always happy but when I am, I’m not.",
       date: "08/11/2022",
+      iconWeather: "11d",
     },
     {
       picture: "./src/assets/MoodBad.png",
       note: "Everything went bad today... 😭",
       date: "07/11/2022",
+      iconWeather: "11d",
     },
     {
       picture: "./src/assets/MoodGood.png",
       note: "That was such a good day! XOXO",
       date: "06/11/2022",
+      iconWeather: "11d",
     },
     {
       picture: "./src/assets/MoodGood.png",
       note: "This is my first Entry! OwO",
       date: "05/11/2022",
+      iconWeather: "11d",
     },
   ]);
 
@@ -110,6 +131,8 @@ function App() {
         clickedButtonHome={clickedButtonHome}
         dataToasts={dataToasts}
         location={location}
+        weather={weather}
+        setWeather={setWeather}
       />
 
       <Calendar clickedButtonCalendar={clickedButtonCalendar} />
@@ -135,6 +158,7 @@ function App() {
         handleClickSettings={() => handleClickSettings}
         clickedButtonSettings={clickedButtonSettings}
         dataToasts={dataToasts}
+        weather={weather}
       />
     </div>
   );

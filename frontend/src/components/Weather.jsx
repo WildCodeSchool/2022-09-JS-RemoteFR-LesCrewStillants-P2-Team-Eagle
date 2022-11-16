@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import "./Weather.css";
 
-export default function Weather({ location }) {
+export default function Weather({ location, weather, setWeather }) {
   // Objects Array, will contain background pictures and daily tip based on weather.
   const [weatherTip, setWeatherTip] = useState("");
   const [backgroundPicture, setBackgroundPicture] = useState("");
@@ -54,23 +54,8 @@ export default function Weather({ location }) {
   ];
 
   // sample weather, in case nothing load
-  const sampleWeather = {
-    weather: [
-      {
-        id: 501,
-        main: "Rain",
-        description: "Moderate rain",
-        icon: "10d",
-      },
-    ],
-    main: {
-      temp: 20,
-    },
-    name: "Paris",
-  };
 
   // Featch Api + useEffect when component load.
-  const [weather, setWeather] = useState(sampleWeather);
   const getWeather = () => {
     axios
       .get(

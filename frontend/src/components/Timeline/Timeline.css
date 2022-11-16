@@ -26,16 +26,18 @@
   height: 52px;
   text-align: center;
   padding: 7px;
+  margin-bottom: 4px;
 }
 
 .imgTimeline {
   grid-column: 1 / 2;
   grid-row: 1/2;
+  gap: 10px;
   text-align: center;
 }
 
 .journalTimeline {
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
