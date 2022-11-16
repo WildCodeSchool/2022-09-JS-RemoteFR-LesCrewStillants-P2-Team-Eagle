@@ -86,8 +86,7 @@ function App() {
     if (!localStorage.getItem("mood")) {
       saveMood();
     }
-  }, []);
-  // A OPTIMISER
+  });
 
   // Function Load City for API and Settings
   function loadCity() {
