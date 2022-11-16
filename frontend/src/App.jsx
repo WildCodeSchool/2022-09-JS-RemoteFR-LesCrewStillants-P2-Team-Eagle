@@ -41,6 +41,11 @@ function App() {
       note: "This is my first Entry! OwO",
       date: "05/11/2022",
     },
+    {
+      picture: "./src/assets/MoodVeryGood.png",
+      note: "This was my best day ever! 🎈🎢",
+      date: "12/10/2022",
+    },
   ]);
 
   // Mood load and save functions
@@ -59,7 +64,8 @@ function App() {
     if (!localStorage.getItem("mood")) {
       saveMood();
     }
-  });
+  }, []);
+  // A OPTIMISER
 
   // Function Load City for API and Settings
   function loadCity() {
