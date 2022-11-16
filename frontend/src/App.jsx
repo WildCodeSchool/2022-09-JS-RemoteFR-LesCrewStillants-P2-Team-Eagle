@@ -62,6 +62,11 @@ function App() {
       date: "05/11/2022",
       iconWeather: "11d",
     },
+    {
+      picture: "./src/assets/MoodVeryGood.png",
+      note: "This was my best day ever! 🎈🎢",
+      date: "12/10/2022",
+    },
   ]);
 
   // Mood load and save functions
@@ -80,7 +85,8 @@ function App() {
     if (!localStorage.getItem("mood")) {
       saveMood();
     }
-  });
+  }, []);
+  // A OPTIMISER
 
   // Function Load City for API and Settings
   function loadCity() {
@@ -135,7 +141,10 @@ function App() {
         setWeather={setWeather}
       />
 
-      <Calendar clickedButtonCalendar={clickedButtonCalendar} />
+      <Calendar
+        clickedButtonCalendar={clickedButtonCalendar}
+        dataToasts={dataToasts}
+      />
 
       <Timeline
         clickedButtonTimeline={clickedButtonTimeline}
