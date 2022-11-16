@@ -6,9 +6,6 @@ import Toaster from "../assets/Toaster.svg";
 import "@components/styleCalendar.css";
 
 export default function Calendar({ clickedButtonCalendar, dataToasts }) {
-  // const date = new Date();
-  // const todayDate = [date.getDate(), date.getMonth() + 1, date.getFullYear()];
-
   const year = [2021, 2022, 2023];
   const month = [
     "January",
@@ -134,7 +131,5 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
         ))}
       </div>
     </section>
-    // if/ find? filter dataToast[X].date === `day/currentMonth/currentYear`
-    // indexOf toast with date ===
   );
 }
