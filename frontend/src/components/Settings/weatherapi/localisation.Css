@@ -1,70 +1,73 @@
 .visible {
-    display: block;
-    animation: fade_in_show 0.5s;
+  display: block;
+  animation: fade_in_show 0.5s;
+}
+
+.hidden {
+  display: none;
+  animation: fade_in_show_two 0.5s;
+}
+
+.localisation {
+  padding: 1rem 0 1rem 0;
+  background-color: #38c6a3;
+  color: white;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: left;
+  border-radius: 18px;
+}
+
+.localisation p,
+.localisation form {
+  padding-left: 1rem;
+}
+
+.localisation p:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
   }
-  
-  .hidden {
-    display: none;
-    animation: fade_in_show_two 0.5s;
-  } 
-  
-  .localisation {
-    padding: 1rem 0 1rem 0;
-    background-color: #38c6a3;
-    color: white;
-    width: 80%;
-    margin: 1rem auto;
-    text-align: left;
-    border-radius: 18px;
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .localisation p,
-  .localisation form {
-    padding-left: 1rem;
-  }
-  
-  .localisation p:first-of-type {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 1rem;
-  }
-  
-  @keyframes fade_in_show {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .localisation form {
-    margin-top: 1rem;
-  }
-  
-  button,
-  input[type="submit"] {
-    margin-left: 0.4rem;
-    color: #38c6a3;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 0.3rem;
-  }
-  
-  button:hover,
-  input[type="submit"]:hover {
-    cursor: pointer;
-  }
-  
-  input[type="text"] {
-    padding: 0.5rem;
-    color: #95462e;
-    background-color: white;
-    border: 2px solid #95462e;
-    border-radius: 8px;
-  }
-  
+}
+
+.localisation form {
+  margin-top: 1rem;
+}
+
+button,
+input[type="submit"] {
+  margin-left: 0.4rem;
+  color: #38c6a3;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 0.3rem;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  color: #95462e;
+  background-color: white;
+  border: 2px solid #eb8f8f;
+  border-radius: 8px;
+}
+
+input[type="text"]:focus-visible {
+  border: 2px solid #eb8f8f;
+}
