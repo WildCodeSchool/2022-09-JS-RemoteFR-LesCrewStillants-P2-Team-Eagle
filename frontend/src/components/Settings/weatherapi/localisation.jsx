@@ -28,7 +28,7 @@ function Localisation({ location, setLocation }) {
   return (
     <div className="localisation">
       <p>
-        📍 Location : {location}
+        Location : {location}
         <button type="button" onClick={handleHide}>
           Edit
         </button>
