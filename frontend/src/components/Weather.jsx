@@ -12,44 +12,44 @@ export default function Weather({ location, weather, setWeather }) {
     {
       weatherTip:
         "Sunshine is everywhere! Maybe you should take your sunglasses!",
-      backgroundPicture: "./src/assets/backgrounds/Sunny.gif",
+      backgroundPicture: "./src/assets/backgrounds/SunnyV2.gif",
     },
     {
       weatherTip:
         "There are just few clouds today! But sun rays are still there, don't let them deceives you!",
-      backgroundPicture: "./src/assets/backgrounds/Sun-And-Clouds.gif",
+      backgroundPicture: "./src/assets/backgrounds/Sun-And-CloudsV2.gif",
     },
     {
       weatherTip:
         "Half clouds, half sun. With such diversity nothing should happen today.",
-      backgroundPicture: "./src/assets/backgrounds/Half-Sun-Half-Clouds.gif",
+      backgroundPicture: "./src/assets/backgrounds/Half-Sun-Half-CloudsV2.gif",
     },
     {
       weatherTip:
         "Clouds... Clouds everywhere! It may rains if the clouds are dark!",
-      backgroundPicture: "./src/assets/backgrounds/Cloudy.gif",
+      backgroundPicture: "./src/assets/backgrounds/CloudyV2.gif",
     },
     {
       weatherTip:
         "There's a bit of rain, but normally not too much. Covering your head should be enough.",
-      backgroundPicture: "./src/assets/backgrounds/Slight-Rain.gif",
+      backgroundPicture: "./src/assets/backgrounds/Slight-RainV2.gif",
     },
     {
       weatherTip: "It's raining today! You should take an umbrella!",
-      backgroundPicture: "./src/assets/backgrounds/Rain.gif",
+      backgroundPicture: "./src/assets/backgrounds/RainV2.gif",
     },
     {
       weatherTip: "There's a thunderstorm out there! Take care of lightning!",
-      backgroundPicture: "./src/assets/backgrounds/Thunderstorm.gif",
+      backgroundPicture: "./src/assets/backgrounds/ThunderstormV2.gif",
     },
     {
       weatherTip:
         "Snow is falling today! You should put warm clothes and maybe do a snowman!",
-      backgroundPicture: "./src/assets/backgrounds/Snow.gif",
+      backgroundPicture: "./src/assets/backgrounds/SnowV2.gif",
     },
     {
       weatherTip: "It's foggy today, pay more attention than ever!",
-      backgroundPicture: "./src/assets/backgrounds/Fog.gif",
+      backgroundPicture: "./src/assets/backgrounds/FogV2.gif",
     },
   ];
 
