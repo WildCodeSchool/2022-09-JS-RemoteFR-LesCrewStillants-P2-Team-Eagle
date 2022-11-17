@@ -7,6 +7,7 @@ import "@components/styleCalendar.css";
 
 export default function Calendar({ clickedButtonCalendar, dataToasts }) {
   const year = [2021, 2022, 2023];
+
   const month = [
     "January",
     "February",
@@ -21,10 +22,37 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
     "November",
     "December",
   ];
-  const [currentMonth, setCurrentMonth] = useState(month[10]);
-  const [currentYear, setCurrentYear] = useState(year[1]);
 
-  const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const twentyEightDay = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+  ];
 
   const thirtyDay = [
     "01",
@@ -59,13 +87,68 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
     30,
   ];
 
+  const thirtyOneDay = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+  ];
+
+  const daysPerMonth = [
+    thirtyOneDay,
+    twentyEightDay,
+    thirtyOneDay,
+    thirtyDay,
+    thirtyOneDay,
+    thirtyDay,
+    thirtyOneDay,
+    thirtyOneDay,
+    thirtyDay,
+    thirtyOneDay,
+    thirtyDay,
+    thirtyOneDay,
+  ];
+
+  const [currentMonth, setCurrentMonth] = useState(month[10]);
+  const [currentYear, setCurrentYear] = useState(year[1]);
+  const [numberofDays, setNumberOfDays] = useState(daysPerMonth[10]);
+
   const handleMinusCalendar = () => {
     if (year.indexOf(currentYear) !== 0 && month.indexOf(currentMonth) === 0) {
       setCurrentMonth(month[11]);
+      setNumberOfDays(daysPerMonth[11]);
       setCurrentYear(year[year.indexOf(currentYear) - 1]);
     }
     if (month.indexOf(currentMonth) !== 0) {
       setCurrentMonth(month[month.indexOf(currentMonth) - 1]);
+      setNumberOfDays(daysPerMonth[month.indexOf(currentMonth) - 1]);
     }
   };
 
@@ -75,10 +158,12 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
       month.indexOf(currentMonth) === 11
     ) {
       setCurrentMonth(month[0]);
+      setNumberOfDays(daysPerMonth[0]);
       setCurrentYear(year[year.indexOf(currentYear) + 1]);
     }
     if (month.indexOf(currentMonth) !== 11) {
       setCurrentMonth(month[month.indexOf(currentMonth) + 1]);
+      setNumberOfDays(daysPerMonth[month.indexOf(currentMonth) + 1]);
     }
   };
 
@@ -100,10 +185,7 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
             <img src={ArrowRight} alt="Arrow Right" width="28px" />
           </button>
         </div>
-        {dayNames.map((day) => (
-          <p>{day}</p>
-        ))}
-        {thirtyDay.map((day) => (
+        {numberofDays.map((day) => (
           <p>
             <p className="toastBackground">
               <img
