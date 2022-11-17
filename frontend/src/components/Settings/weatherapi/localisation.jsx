@@ -30,7 +30,7 @@ function Localisation({ location, setLocation }) {
       <p>
         📍 Location : {location}
         <button type="button" onClick={handleHide}>
-          Change
+          Edit
         </button>
       </p>
 
