@@ -8,13 +8,19 @@ export default function HomePage({
   location,
   weather,
   setWeather,
+  name,
 }) {
   return (
     <section
       id="HomePage"
       className={clickedButtonHome ? "homeVisible" : "homeHidden"}
     >
-      <Weather location={location} weather={weather} setWeather={setWeather} />
+      <Weather
+        location={location}
+        weather={weather}
+        setWeather={setWeather}
+        name={name}
+      />
       <DailyMood dataToasts={dataToasts} />
       <TodoList />
     </section>

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import "./Weather.css";
 
-export default function Weather({ location, weather, setWeather }) {
+export default function Weather({ location, weather, setWeather, name }) {
   // Objects Array, will contain background pictures and daily tip based on weather.
   const [weatherTip, setWeatherTip] = useState("");
   const [backgroundPicture, setBackgroundPicture] = useState("");
@@ -134,20 +134,6 @@ export default function Weather({ location, weather, setWeather }) {
       setBackgroundPicture(weatherExtra[8].backgroundPicture);
     }
   }, [getWeather]);
-
-  // Local storage load of User name
-  const [name, setName] = useState("User");
-  const loadData = () => {
-    if (!localStorage.getItem("name")) return;
-
-    const loadName = JSON.parse(localStorage.getItem("name"));
-
-    setName(loadName);
-  };
-
-  useEffect(() => {
-    loadData();
-  });
 
   return (
     <section

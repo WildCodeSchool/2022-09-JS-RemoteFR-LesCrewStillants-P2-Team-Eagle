@@ -14,6 +14,7 @@ function App() {
   const [clickedButtonSettings, setClickedButtonSettings] = useState(false);
 
   const [location, setLocation] = useState("");
+  const [name, setName] = useState("User");
 
   // Sample weather in case API broken
   const sampleWeather = {
@@ -86,7 +87,7 @@ function App() {
     if (!localStorage.getItem("mood")) {
       saveMood();
     }
-  });
+  }, [dataToasts]);
 
   // Function Load City for API and Settings
   function loadCity() {
@@ -139,6 +140,7 @@ function App() {
         location={location}
         weather={weather}
         setWeather={setWeather}
+        name={name}
       />
 
       <Calendar
@@ -155,6 +157,8 @@ function App() {
         clickedButtonSettings={clickedButtonSettings}
         location={location}
         setLocation={setLocation}
+        name={name}
+        setName={setName}
       />
 
       <Nav
