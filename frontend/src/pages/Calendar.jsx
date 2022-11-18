@@ -6,6 +6,7 @@ import Toaster from "../assets/Toaster.svg";
 import "@components/styleCalendar.css";
 
 export default function Calendar({ clickedButtonCalendar, dataToasts }) {
+  const date = new Date();
   const year = [2021, 2022, 2023];
 
   const month = [
@@ -164,6 +165,14 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
     if (month.indexOf(currentMonth) !== 11) {
       setCurrentMonth(month[month.indexOf(currentMonth) + 1]);
       setNumberOfDays(daysPerMonth[month.indexOf(currentMonth) + 1]);
+    }
+    if (
+      currentYear === date.getFullYear() &&
+      month.indexOf(currentMonth) === date.getMonth()
+    ) {
+      setCurrentMonth(month[month.indexOf(currentMonth)]);
+      setNumberOfDays(daysPerMonth[month.indexOf(currentMonth)]);
+      setCurrentYear(year[year.indexOf(currentYear)]);
     }
   };
 

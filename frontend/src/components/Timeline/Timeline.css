@@ -37,7 +37,7 @@
 }
 
 .sunFilter {
-  filter: hue-rotate(30deg) brightness(170%);
+  filter: hue-rotate(30deg) brightness(170%) drop-shadow(0 0 0.1rem yellow);
 }
 
 .journalTimeline {
