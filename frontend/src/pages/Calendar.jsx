@@ -195,7 +195,15 @@ export default function Calendar({ clickedButtonCalendar, dataToasts }) {
           </button>
         </div>
         {numberofDays.map((day) => (
-          <p>
+          <p
+            className={
+              currentYear === date.getFullYear() &&
+              month.indexOf(currentMonth) === date.getMonth() &&
+              day > date.getDate()
+                ? "greyToasts"
+                : ""
+            }
+          >
             <p className="toastBackground">
               <img
                 src={
