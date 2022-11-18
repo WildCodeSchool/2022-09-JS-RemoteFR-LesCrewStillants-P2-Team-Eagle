@@ -133,7 +133,7 @@ export default function Weather({ location, weather, setWeather, name }) {
       setWeatherTip(weatherExtra[8].weatherTip);
       setBackgroundPicture(weatherExtra[8].backgroundPicture);
     }
-  }, [getWeather]);
+  }, [weather]);
 
   return (
     <section
