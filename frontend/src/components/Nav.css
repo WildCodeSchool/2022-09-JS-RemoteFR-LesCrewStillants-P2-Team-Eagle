@@ -32,11 +32,13 @@
 .standardButton {
   width: 3rem;
   height: 3rem;
+  transition: 100ms;
 }
 
 .clickedButton {
   width: 2rem;
   height: 2rem;
+  transition: 100ms;
 }
 
 .textVisible {
