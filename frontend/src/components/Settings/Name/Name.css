@@ -62,8 +62,12 @@ input[type="submit"]:hover {
 
 input[type="text"] {
   padding: 0.5rem;
-  color: #38c6a3;
+  color: #95462e;
   background-color: white;
-  border: 2px solid #38c6a3;
+  border: 2px solid #eb8f8f;
   border-radius: 8px;
+}
+
+input[type="text"]:focus-visible {
+  border: 2px solid #eb8f8f;
 }

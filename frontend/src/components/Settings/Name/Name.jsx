@@ -42,7 +42,7 @@ function Name() {
       <p>
         Name : {name}
         <button type="button" onClick={handleHide}>
-          Modify
+          Edit
         </button>
       </p>
 

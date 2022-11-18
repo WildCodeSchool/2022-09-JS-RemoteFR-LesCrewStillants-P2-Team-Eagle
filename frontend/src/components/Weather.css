@@ -1,10 +1,33 @@
 #Weather {
+  color: #95462e;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: bottom/cover;
+  min-height: 45vh;
 }
 
 #Weather img {
   margin: -2rem;
+  filter: drop-shadow(0 0 0.75rem #918b8a);
+}
+
+#Weather h2 {
+  margin-bottom: 1rem;
+}
+
+#Weather p,
+#Weather h2,
+#Weather h1 {
+  text-align: center;
+  background-color: #ffffffbe;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+#WeatherTip {
+  width: 60%;
 }

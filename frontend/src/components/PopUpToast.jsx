@@ -3,7 +3,7 @@ import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
 import "./PopUpToastStyle.css";
 
-function PopUpToast({ closePopUp, dataToasts }) {
+function PopUpToast({ closePopUp, dataToasts, weather }) {
   // Toast
   const [moodChoice, setMoodChoice] = useState("./src/assets/MoodVeryGood.png");
   const imgToasts = document.querySelectorAll("#toastCenter img");
@@ -20,8 +20,15 @@ function PopUpToast({ closePopUp, dataToasts }) {
 
   // Journal
   const [noteText, setnoteText] = useState("");
+  const date = new Date();
 
-  const dailyData = { picture: moodChoice, note: noteText, date: "10/11/2022" };
+  // Daily
+  const dailyData = {
+    picture: moodChoice,
+    note: noteText,
+    date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
+    iconWeather: weather.weather[0].icon,
+  };
 
   function handlechange(event) {
     setnoteText(event.target.value);
@@ -32,6 +39,9 @@ function PopUpToast({ closePopUp, dataToasts }) {
   }
 
   function handleClick() {
+    if (dataToasts[0].date === dailyData.date) {
+      dataToasts.shift();
+    }
     dataToasts.unshift(dailyData);
     saveMood();
     closePopUp(false);
