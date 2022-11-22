@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./localisation.css";
+import "./style_localisation.css";
 import localisationimg from "@assets/settings_img/localisation.svg";
 
 function Localisation({ location, setLocation }) {

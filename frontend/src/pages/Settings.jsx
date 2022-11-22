@@ -1,7 +1,7 @@
 import Name from "@components/Settings/Name/Name";
 import Faq from "@components/Settings/Faq/Faq";
 import "@components/Settings/Settings.css";
-import Localisation from "@components/Settings/weatherapi/localisation";
+import Localisation from "@components/Settings/localisation/localisation";
 
 export default function Settings({
   clickedButtonSettings,
