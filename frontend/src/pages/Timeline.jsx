@@ -18,6 +18,11 @@ export default function Timeline({ clickedButtonTimeline, dataToasts }) {
                 alt="weatherTimeline"
                 src={`http://openweathermap.org/img/wn/${toast.iconWeather}@4x.png`}
                 width="36px"
+                className={
+                  toast.iconWeather === "01d" || toast.iconWeather === "01n"
+                    ? "sunFilter"
+                    : ""
+                }
               />
             </p>
           </p>

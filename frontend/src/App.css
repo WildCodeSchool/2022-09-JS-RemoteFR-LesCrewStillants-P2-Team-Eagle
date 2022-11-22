@@ -27,3 +27,28 @@ body {
 .homeHidden {
   display: none;
 }
+
+@media only screen and (min-width: 480px) {
+  body {
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  #root {
+    width: 480px;
+  }
+
+  .navContainer {
+    width: 480px;
+  }
+}

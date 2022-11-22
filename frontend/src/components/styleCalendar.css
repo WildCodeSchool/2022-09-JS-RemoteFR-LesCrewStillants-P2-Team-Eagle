@@ -36,3 +36,7 @@
   background: none;
   border: none;
 }
+
+.greyToasts {
+  filter: grayscale(80%);
+}

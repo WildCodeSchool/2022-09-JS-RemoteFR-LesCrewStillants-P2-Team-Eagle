@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Name.css";
 
-function Name() {
-  const [name, setName] = useState("User");
+function Name({ name, setName }) {
   const [newName, setNewName] = useState("");
   const [isHiding, setIsHiding] = useState(false);
 
