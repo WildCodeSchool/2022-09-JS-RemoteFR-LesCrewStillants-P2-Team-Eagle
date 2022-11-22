@@ -2,7 +2,7 @@ import TodoList from "@components/Home/ToDoList/TodoList";
 import Weather from "@components/Weather";
 import DailyMood from "@components/DailyMood";
 
-export default function HomePage({
+export default function Home({
   clickedButtonHome,
   dataToasts,
   location,
