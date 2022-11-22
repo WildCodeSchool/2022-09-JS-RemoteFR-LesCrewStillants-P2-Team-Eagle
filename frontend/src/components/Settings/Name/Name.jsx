@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Name.css";
+import nameimg from "@assets/settings_img/name.svg";
 
 function Name({ name, setName }) {
   const [newName, setNewName] = useState("");
@@ -39,7 +40,10 @@ function Name({ name, setName }) {
   return (
     <div className="Name">
       <p>
-        Name : {name}
+        <span>
+          <img src={nameimg} alt="name icon" />
+          Name : {name}
+        </span>
         <button type="button" onClick={handleHide}>
           Edit
         </button>
