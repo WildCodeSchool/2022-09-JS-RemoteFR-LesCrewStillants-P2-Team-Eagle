@@ -8,6 +8,9 @@ export default function Weather({ location, weather, setWeather, name }) {
   const [weatherTip, setWeatherTip] = useState("");
   const [backgroundPicture, setBackgroundPicture] = useState("");
 
+  // import API Key from .env
+  const ApiKey = import.meta.env.VITE_API_KEY;
+
   const weatherExtra = [
     {
       weatherTip:
@@ -57,7 +60,7 @@ export default function Weather({ location, weather, setWeather, name }) {
   const getWeather = () => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=cfabb61122ea2cb8834a911a754e5cd5&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=${ApiKey}&units=metric`
       )
       .then((res) => res.data)
       .then((data) => {
