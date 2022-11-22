@@ -1,3 +1,11 @@
+.Weather-background {
+  background: linear-gradient(
+    180deg,
+    rgba(228, 242, 252, 1) 0%,
+    rgba(251, 236, 230, 0.9458158263305322) 100%
+  );
+}
+
 #Weather {
   color: #95462e;
   display: flex;
@@ -13,6 +21,7 @@
 }
 
 #Weather h2 {
+  margin: 0 1rem;
   margin-bottom: 1rem;
 }
 

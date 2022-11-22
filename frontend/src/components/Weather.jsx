@@ -139,20 +139,22 @@ export default function Weather({ location, weather, setWeather, name }) {
   }, [weather]);
 
   return (
-    <section
-      id="Weather"
-      style={{ backgroundImage: `url(${backgroundPicture})` }}
-    >
-      <h1>Hello {name}!</h1>
-      <img
-        src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
-        alt="Today's weather"
-        width="180px"
-      />
-      <h2>
-        {weather.name}, {Math.floor(weather.main.temp)}°{" "}
-      </h2>
-      <p id="WeatherTip">{weatherTip}</p>
-    </section>
+    <div className="Weather-background">
+      <section
+        id="Weather"
+        style={{ backgroundImage: `url(${backgroundPicture})` }}
+      >
+        <h1>Hello {name}!</h1>
+        <img
+          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
+          alt="Today's weather"
+          width="180px"
+        />
+        <h2>
+          {weather.name}, {Math.floor(weather.main.temp)}°{" "}
+        </h2>
+        <p id="WeatherTip">{weatherTip}</p>
+      </section>
+    </div>
   );
 }

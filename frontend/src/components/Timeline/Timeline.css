@@ -1,8 +1,14 @@
 #Timeline {
   color: #ffffff;
-  width: 95%;
+  width: 100%;
   margin: auto;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(228, 242, 252, 1) 0%,
+    rgba(251, 236, 230, 0.9458158263305322) 27%
+  );
 }
 
 #Timeline div {
