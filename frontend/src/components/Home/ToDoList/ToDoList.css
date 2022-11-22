@@ -54,10 +54,10 @@
 .containerToDo .button-delete {
   border: none;
   cursor: pointer;
-  background-color: rgb(255, 71, 71);
+  background-color: #95462ecb;
   border-radius: 8px;
   margin: 0px;
-  color: white;
+  color: #fbece6;
   padding: 10px;
 }
 
