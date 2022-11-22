@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PopUpToast from "@components/PopUpToast";
 
-export default function Home({ dataToasts, weather }) {
+export default function HomePopUp({ dataToasts, weather }) {
   const [openPopUp, setOpenPopUp] = useState(false);
 
   return (

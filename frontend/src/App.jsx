@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import HomePage from "@pages/Home";
+import Home from "@pages/Home";
 import Calendar from "@pages/Calendar";
 import Timeline from "@pages/Timeline";
 import Nav from "@components/Nav";
@@ -134,7 +134,7 @@ function App() {
   }
   return (
     <div className="App">
-      <HomePage
+      <Home
         clickedButtonHome={clickedButtonHome}
         dataToasts={dataToasts}
         location={location}

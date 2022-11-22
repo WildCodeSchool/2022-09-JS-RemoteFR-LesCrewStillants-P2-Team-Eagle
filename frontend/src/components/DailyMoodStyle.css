@@ -16,6 +16,7 @@
 .journalToast,
 .dateToast {
   background-color: #38c6a3;
+  box-shadow: 0 0 15px#eb8f8f;
   border-radius: 18px;
   margin: 0 auto;
 }
