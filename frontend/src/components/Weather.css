@@ -26,6 +26,7 @@
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   font-weight: 600;
+  box-shadow: #65524c 0px 10px 15px -10px;
 }
 
 #WeatherTip {

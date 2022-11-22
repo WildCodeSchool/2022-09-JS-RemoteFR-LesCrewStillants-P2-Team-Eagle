@@ -15,6 +15,7 @@
   width: 80%;
   margin: 1rem auto;
   border-radius: 18px;
+  box-shadow: #65524c 0px 10px 15px -10px;
 }
 
 .Faq p {

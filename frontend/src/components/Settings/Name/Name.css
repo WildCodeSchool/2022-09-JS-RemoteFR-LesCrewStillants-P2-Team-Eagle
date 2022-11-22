@@ -16,6 +16,7 @@
   margin: 1rem auto;
   text-align: left;
   border-radius: 18px;
+  box-shadow: #65524c 0px 10px 15px -10px;
 }
 
 .Name p,
