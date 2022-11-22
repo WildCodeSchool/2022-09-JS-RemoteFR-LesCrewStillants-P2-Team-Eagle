@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PopUpToast from "@components/PopUpToast";
 
-export default function HomePopUp({ dataToasts, weather }) {
+export default function HomePopUp({ dataToasts, weather, name }) {
   const [openPopUp, setOpenPopUp] = useState(false);
 
   return (
@@ -12,6 +12,7 @@ export default function HomePopUp({ dataToasts, weather }) {
           closePopUp={setOpenPopUp}
           dataToasts={dataToasts}
           weather={weather}
+          name={name}
         />
       )}
       <img

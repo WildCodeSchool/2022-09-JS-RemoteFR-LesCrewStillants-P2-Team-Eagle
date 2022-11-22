@@ -172,6 +172,7 @@ function App() {
         clickedButtonSettings={clickedButtonSettings}
         dataToasts={dataToasts}
         weather={weather}
+        name={name}
       />
     </div>
   );
