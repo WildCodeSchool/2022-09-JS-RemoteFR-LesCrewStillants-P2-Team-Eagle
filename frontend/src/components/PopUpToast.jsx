@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Journal from "@components/Home/Journal/Journal";
 import ToastsMood from "./ToastsMood";
+import AnthoMood from "./AnthoMood";
 import "./PopUpToastStyle.css";
 
-function PopUpToast({ closePopUp, dataToasts, weather }) {
+function PopUpToast({ closePopUp, dataToasts, weather, name }) {
   // Toast
   const [moodChoice, setMoodChoice] = useState("./src/assets/MoodVeryGood.png");
   const imgToasts = document.querySelectorAll("#toastCenter img");
@@ -59,17 +60,29 @@ function PopUpToast({ closePopUp, dataToasts, weather }) {
           <p>How do you feel today ?</p>
         </div>
         <div id="toastCenter">
-          {ToastsMood.map((toast, index) => (
-            <img
-              alt="ToastMood"
-              keys={index}
-              src={toast.picture}
-              width="40rem"
-              height="40rem"
-              onClick={(event) => handleMoodChoice(event, toast.picture)}
-              aria-hidden="true"
-            />
-          ))}
+          {name === "Antho Le BG"
+            ? AnthoMood.map((antho, index) => (
+                <img
+                  alt="AnthoMood"
+                  keys={index}
+                  src={antho.picture}
+                  width="50rem"
+                  height="50rem"
+                  onClick={(event) => handleMoodChoice(event, antho.picture)}
+                  aria-hidden="true"
+                />
+              ))
+            : ToastsMood.map((toast, index) => (
+                <img
+                  alt="ToastMood"
+                  keys={index}
+                  src={toast.picture}
+                  width="40rem"
+                  height="40rem"
+                  onClick={(event) => handleMoodChoice(event, toast.picture)}
+                  aria-hidden="true"
+                />
+              ))}
         </div>
 
         <Journal noteText={noteText} handlechange={() => handlechange} />

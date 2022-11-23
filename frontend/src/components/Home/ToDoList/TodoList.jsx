@@ -17,28 +17,22 @@ function TodoList() {
   return (
     <div className="containerToDo">
       <div className="app-wrapper">
-        <div>
-          <div className="todolist">
-            <h1>To Do</h1>
-          </div>
+        <div className="todolist">
+          <h1>To Do</h1>
         </div>
-        <div>
-          <Form
-            input={input}
-            setInput={setInput}
-            todos={todos}
-            setTodos={setTodos}
-            editTodo={editTodo}
-            setEditTodo={setEditTodo}
-          />
-        </div>
-        <div>
-          <TodosList
-            todos={todos}
-            setTodos={setTodos}
-            setEditTodo={setEditTodo}
-          />
-        </div>
+        <Form
+          input={input}
+          setInput={setInput}
+          todos={todos}
+          setTodos={setTodos}
+          editTodo={editTodo}
+          setEditTodo={setEditTodo}
+        />
+        <TodosList
+          todos={todos}
+          setTodos={setTodos}
+          setEditTodo={setEditTodo}
+        />
       </div>
     </div>
   );

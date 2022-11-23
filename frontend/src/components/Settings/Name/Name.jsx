@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "./Name.css";
+import nameimg from "@assets/settings_img/name.svg";
 
-function Name() {
-  const [name, setName] = useState("User");
+function Name({ name, setName }) {
   const [newName, setNewName] = useState("");
   const [isHiding, setIsHiding] = useState(false);
 
@@ -40,7 +40,10 @@ function Name() {
   return (
     <div className="Name">
       <p>
-        Name : {name}
+        <span>
+          <img src={nameimg} alt="name icon" />
+          Name : {name}
+        </span>
         <button type="button" onClick={handleHide}>
           Edit
         </button>

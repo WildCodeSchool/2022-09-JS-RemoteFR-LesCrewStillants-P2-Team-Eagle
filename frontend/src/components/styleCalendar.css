@@ -1,7 +1,16 @@
+#Calendar {
+  background: linear-gradient(
+    180deg,
+    rgba(228, 242, 252, 1) 3%,
+    rgba(251, 236, 230, 0.9458158263305322) 96%
+  );
+}
+
 #Calendar #gridCalendar {
   color: #95462e;
-  margin: 1rem;
-  margin-bottom: 6rem;
+  margin: O;
+  padding: 1rem;
+  margin-bottom: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0.3rem;
@@ -30,9 +39,14 @@
   background-color: #38c6a3;
   border-radius: 50px;
   margin: 0.5rem 0;
+  box-shadow: #65524c 0px 10px 15px -10px;
 }
 
 #Calendar button {
   background: none;
   border: none;
+}
+
+.greyToasts {
+  filter: grayscale(80%);
 }

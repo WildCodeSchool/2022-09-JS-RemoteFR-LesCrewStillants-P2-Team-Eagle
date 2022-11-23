@@ -3,10 +3,13 @@ import { useState, useEffect } from "react";
 
 import "./Weather.css";
 
-export default function Weather({ location, weather, setWeather }) {
+export default function Weather({ location, weather, setWeather, name }) {
   // Objects Array, will contain background pictures and daily tip based on weather.
   const [weatherTip, setWeatherTip] = useState("");
   const [backgroundPicture, setBackgroundPicture] = useState("");
+
+  // import API Key from .env
+  const ApiKey = import.meta.env.VITE_API_KEY;
 
   const weatherExtra = [
     {
@@ -57,7 +60,7 @@ export default function Weather({ location, weather, setWeather }) {
   const getWeather = () => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=cfabb61122ea2cb8834a911a754e5cd5&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&lang=en&appid=${ApiKey}&units=metric`
       )
       .then((res) => res.data)
       .then((data) => {
@@ -133,37 +136,25 @@ export default function Weather({ location, weather, setWeather }) {
       setWeatherTip(weatherExtra[8].weatherTip);
       setBackgroundPicture(weatherExtra[8].backgroundPicture);
     }
-  }, [getWeather]);
-
-  // Local storage load of User name
-  const [name, setName] = useState("User");
-  const loadData = () => {
-    if (!localStorage.getItem("name")) return;
-
-    const loadName = JSON.parse(localStorage.getItem("name"));
-
-    setName(loadName);
-  };
-
-  useEffect(() => {
-    loadData();
-  });
+  }, [weather]);
 
   return (
-    <section
-      id="Weather"
-      style={{ backgroundImage: `url(${backgroundPicture})` }}
-    >
-      <h1>Hello {name}!</h1>
-      <img
-        src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
-        alt="Today's weather"
-        width="180px"
-      />
-      <h2>
-        {weather.name}, {Math.floor(weather.main.temp)}°{" "}
-      </h2>
-      <p id="WeatherTip">{weatherTip}</p>
-    </section>
+    <div className="Weather-background">
+      <section
+        id="Weather"
+        style={{ backgroundImage: `url(${backgroundPicture})` }}
+      >
+        <h1>Hello {name}!</h1>
+        <img
+          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
+          alt="Today's weather"
+          width="180px"
+        />
+        <h2>
+          {weather.name}, {Math.floor(weather.main.temp)}°{" "}
+        </h2>
+        <p id="WeatherTip">{weatherTip}</p>
+      </section>
+    </div>
   );
 }

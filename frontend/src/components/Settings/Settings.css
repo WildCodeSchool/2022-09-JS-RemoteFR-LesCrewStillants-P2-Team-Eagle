@@ -1,6 +1,11 @@
 #Settings {
   color: #95462e;
   background-color: #fbece6;
+  background: linear-gradient(
+    180deg,
+    rgba(228, 242, 252, 1) 3%,
+    rgba(251, 236, 230, 0.9458158263305322) 96%
+  );
   padding: 1rem 0;
   margin-bottom: 6rem;
 }

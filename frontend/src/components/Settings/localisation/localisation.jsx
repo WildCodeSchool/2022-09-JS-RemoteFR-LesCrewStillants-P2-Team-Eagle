@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./localisation.css";
+import "./style_localisation.css";
+import localisationimg from "@assets/settings_img/localisation.svg";
 
 function Localisation({ location, setLocation }) {
   const [newLocation, setNewLocation] = useState("");
@@ -28,7 +29,10 @@ function Localisation({ location, setLocation }) {
   return (
     <div className="localisation">
       <p>
-        Location : {location}
+        <span>
+          <img src={localisationimg} alt="localisation icon" width="18px" />
+          Location : {location}
+        </span>
         <button type="button" onClick={handleHide}>
           Edit
         </button>

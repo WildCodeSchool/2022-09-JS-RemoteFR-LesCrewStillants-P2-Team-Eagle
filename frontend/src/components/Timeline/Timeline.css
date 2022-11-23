@@ -1,8 +1,14 @@
 #Timeline {
   color: #ffffff;
-  width: 95%;
+  width: 100%;
   margin: auto;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(228, 242, 252, 1) 0%,
+    rgba(251, 236, 230, 0.9458158263305322) 27%
+  );
 }
 
 #Timeline div {
@@ -18,6 +24,7 @@
   background-color: #38c6a3;
   border-radius: 18px;
   margin: 0 auto;
+  box-shadow: #65524c 0px 10px 15px -10px;
 }
 
 .imgTimeline p {
@@ -34,6 +41,10 @@
   grid-row: 1/2;
   gap: 10px;
   text-align: center;
+}
+
+.sunFilter {
+  filter: hue-rotate(30deg) brightness(170%) drop-shadow(0 0 0.1rem yellow);
 }
 
 .journalTimeline {

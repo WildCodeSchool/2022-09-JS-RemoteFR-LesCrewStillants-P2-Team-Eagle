@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import HomePage from "@pages/Home";
+import Home from "@pages/Home";
 import Calendar from "@pages/Calendar";
 import Timeline from "@pages/Timeline";
 import Nav from "@components/Nav";
@@ -14,6 +14,7 @@ function App() {
   const [clickedButtonSettings, setClickedButtonSettings] = useState(false);
 
   const [location, setLocation] = useState("");
+  const [name, setName] = useState("User");
 
   // Sample weather in case API broken
   const sampleWeather = {
@@ -86,7 +87,7 @@ function App() {
     if (!localStorage.getItem("mood")) {
       saveMood();
     }
-  });
+  }, [dataToasts]);
 
   // Function Load City for API and Settings
   function loadCity() {
@@ -133,12 +134,13 @@ function App() {
   }
   return (
     <div className="App">
-      <HomePage
+      <Home
         clickedButtonHome={clickedButtonHome}
         dataToasts={dataToasts}
         location={location}
         weather={weather}
         setWeather={setWeather}
+        name={name}
       />
 
       <Calendar
@@ -155,6 +157,8 @@ function App() {
         clickedButtonSettings={clickedButtonSettings}
         location={location}
         setLocation={setLocation}
+        name={name}
+        setName={setName}
       />
 
       <Nav
@@ -168,6 +172,7 @@ function App() {
         clickedButtonSettings={clickedButtonSettings}
         dataToasts={dataToasts}
         weather={weather}
+        name={name}
       />
     </div>
   );
