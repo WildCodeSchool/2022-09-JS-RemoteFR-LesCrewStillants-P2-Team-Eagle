@@ -1,43 +1,51 @@
-## Concept
+## Toasty Mood 
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+Toasty Mood is a Single Page App that will help you to review your mood according to the weather and manage your everyday's life tasks. Your experience will be better on a mobile phone. Come try it !
 
-## Setup & Use
+```mermaid
+graph TD;
+    Home-->Calendar;
+    Home-->Timeline;
+    Home-->Settings;
+```
 
-### Project Initialization
+### Dev Team
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm run setup`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+- [Christopher Raspail](https://github.com/Laynaria)
+- [Alicia Dupil](https://github.com/Alicia-Dupil)
+- [Vivien Méreaux](https://github.com/Vivien51380)
+- [Lana Duval](https://github.com/lanaduval)
+- [Mustapha Said](https://github.com/smoosy75)
 
-### Available Commands
 
-- `setup` : Initialization of frontend and backend, as well as all toolings
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+### Working Methods
 
-## FAQ
+- We worked with agile SCRUM methodology
 
-### Tools
+- We made 6 sprints of 1 week : 
+  sprint 0 : brainstorming and concept development
+  sprint 1 - 4 : features development
+  sprint 5 - 6 : details and aesthetic improvements
+  
+### Tools & Technologies
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+#Figma
+#Git
+#Github
+#React / Vite Template
+#JSX
+#CSS
+#API
 
-### Team Dev
+### API reference
 
-- Christopher
-- Alicia
-- Vivien
-- Lana
-- Mustapha
+[OpenWeather](https://openweathermap.org/)
+
+
+### Setup
+
+To run this project, install it locally using npm: (only front folder is necessary)
+
+```bash 
+npm run setup
+npm run dev-front 
